@@ -15,12 +15,14 @@ html, body {
   height: 100%;
 }
 
+/* Estilo del Login  y registro */
+
 .container{
     height: 100%;
     align-content: center;
 }
     
-.card{
+.cuadroLogin{
     height: 350px;
     margin-top: auto;
     margin-bottom: auto;
@@ -30,12 +32,6 @@ html, body {
     
 .card-header h3{
     color: white;
-}
-    
-.social_icon{
-    position: absolute;
-    right: 20px;
-    top: -45px;
 }
     
 .input-group-prepend span{
@@ -74,3 +70,4 @@ input:focus{
 .links a{
     margin-left: 4px;
 }
+

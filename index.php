@@ -18,6 +18,7 @@ if (!isset($_SESSION['usuario'])){
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");
 
+
 } else if ($_SESSION['usuario'] == "nouser"){
 
     //Footer de la aplicación

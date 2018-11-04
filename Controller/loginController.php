@@ -3,9 +3,19 @@
 //Llamada al modelo
 include("Model/usuariosModel.php");
 
-$usuario = new usuariosModel();
+$usuarioLogin = new usuariosModel();
+$usuarioRegistro = new usuariosModel();
 
-//Llamamos a la vista
-include("View/login.php");
+if(isset($_GET['register'])){
+
+    //Llamamos a la vista
+    include("View/register.php");
+
+} else {
+
+    //Llamamos a la vista
+    include("View/login.php");
+
+}
 
 ?>

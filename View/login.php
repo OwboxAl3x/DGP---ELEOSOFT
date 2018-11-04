@@ -7,13 +7,15 @@
                 $username = $_POST['usuario'];
                 $pass = $_POST['contrasenia'];
 
-                $result = $usuario->buscarUsuario($username, $pass);
+                $result = $usuarioLogin->buscarUsuario($username, $pass);
 
                 if ($result) {
                     $_SESSION['usuario'] = $_POST['usuario'];
 
                     header("location:index.php");
                 } else {
+
+                    //Fallo en el login
 
                 }
 
@@ -28,7 +30,7 @@
 
         <div class="container">
             <div class="d-flex justify-content-center h-100">
-                <div class="card">
+                <div class="card cuadroLogin">
                     <div class="card-header">
                         <h3>EleoSoft</h3>
                     </div>
@@ -58,7 +60,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
-                            ¿No tienes cuenta?<a href="#">Registrarse</a>
+                            ¿No tienes cuenta?<a href="index.php?register">Registrarse</a>
                         </div>
                         <div class="d-flex justify-content-center">
                             <a href="#">¿Olvidaste tu contraseña?</a>
