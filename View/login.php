@@ -15,7 +15,7 @@
                     header("location:index.php");
                 } else {
 
-                    //Fallo en el login
+                    echo 'Ha fallado al loguear al usuario';
 
                 }
 

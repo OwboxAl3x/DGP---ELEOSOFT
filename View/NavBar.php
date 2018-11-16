@@ -2,7 +2,7 @@
 
  ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-            <a class="navbar-brand" href="#"> <img class="logo" src="./Imagenes/favicon.ico" height="40"> ELEOSOFT</a>
+            <a class="navbar-brand" href="./index.php"> <img class="logo" src="./Imagenes/favicon.ico" height="40"> ELEOSOFT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +26,19 @@
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a class="btn ml-2 btn-warning" href="./index.php?login">Iniciar Sesión</a>
+                        <?php
+
+                            if (!isset($_SESSION['usuario'])){
+
+                                echo '<a class="btn ml-2 btn-warning" href="./index.php?login">Iniciar Sesión</a>';
+
+                            } else {
+
+                                echo '<a class="btn ml-2 btn-warning" href="./index.php?fuera">Cerrar Sesión</a>';
+
+                            }
+
+                        ?>
                     </li>
                 </ul>
             </div>

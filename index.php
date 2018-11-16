@@ -6,11 +6,14 @@ require("DB/connect.php");
 //Recuperar sesion abierta
 session_start();
 
-//Libera las variables de SESION
-//session_unset();
-
 //Header de la aplicación
 include("View/header.php");
+
+if (isset($_GET['fuera'])){
+    //Libera las variables de SESION
+    session_unset();
+    header("location:index.php");
+}
 
 include("View/NavBar.php");
 
@@ -24,7 +27,7 @@ include("View/NavBar.php");
     //Footer de la aplicación
     include("View/footer.php");
 
-} else */if (isset($_GET['login'])) {
+} else */if (isset($_GET['login']) or (isset($_GET['register']))) {
 
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");

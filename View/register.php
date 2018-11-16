@@ -18,7 +18,7 @@
 
             } else {
 
-                //Fallo en el registro
+                echo 'Ha fallado al registrar al usuario';
 
             }
 

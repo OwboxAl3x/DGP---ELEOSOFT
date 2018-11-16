@@ -14,7 +14,7 @@ class usuariosModel{
 
     public function buscarUsuario($username, $pass){
 
-        $result = $this->db->query("SELECT * FROM Usuario WHERE (Usuario='".$username."') && (Contrasenia='".$pass."');");
+        $result = $this->db->query("SELECT * FROM Usuario WHERE (login='".$username."') && (pass='".$pass."');");
 
         if (!$result) {
             return false;
@@ -30,7 +30,7 @@ class usuariosModel{
 
     public function registrar($username, $pass, $email, $nombre){
 
-        $consulta = $this->db->query("SELECT * FROM Usuario WHERE (Usuario='".$username."') or (Email='".$email."');");
+        $consulta = $this->db->query("SELECT * FROM Usuario WHERE (login='".$username."') or (email='".$email."');");
 
         if(!$consulta){
             return false;
@@ -40,7 +40,7 @@ class usuariosModel{
             return false;
         }
 
-        $consulta = $this->db->query("INSERT INTO Usuario (ID, Usuario, Nombre, Email, Contrasenia) VALUES (NULL, '".$username."', '".$nombre."', '".$email."', '".$pass."');");
+        $consulta = $this->db->query("INSERT INTO Usuario (IDusuario, login, nombre, email, pass) VALUES (NULL, '".$username."', '".$nombre."', '".$email."', '".$pass."');");
 
         if(!$consulta){
             return false;
