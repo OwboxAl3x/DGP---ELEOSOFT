@@ -58,7 +58,14 @@ input:focus{
 .login_btn{
     color: black;
     background-color: #FFC312;
-    width: 100px;
+    width: 80%;
+    alignment: center;
+}
+
+.register_btn{
+    color: black;
+    background-color: #FFC312;
+    width: 40%;
 }
     
 .links{
@@ -68,5 +75,7 @@ input:focus{
 .links a{
     margin-left: 4px;
 }
+
+
 
 

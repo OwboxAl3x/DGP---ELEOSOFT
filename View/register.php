@@ -62,8 +62,8 @@
                                 <input type="password" class="form-control" name="contrasenia" placeholder="Contraseña">
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Cancelar" name="cancel" class="btn float-left login_btn">
-                                <input type="submit" value="Registrarse" name="registrarse" class="btn float-right login_btn">
+                                <input type="submit" value="Cancelar" name="cancel" class="btn float-left register_btn">
+                                <input type="submit" value="Registrarse" name="registrarse" class="btn float-right register_btn">
                             </div>
                         </form>
                     </div>

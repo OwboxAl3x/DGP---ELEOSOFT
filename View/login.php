@@ -53,8 +53,9 @@
                                 <input type="checkbox">Recuerdame
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="No Login" name="noini" class="btn float-left login_btn">
-                                <input type="submit" value="Login" name="inisesion" class="btn float-right login_btn">
+                                <div class="text-center">
+                                    <input type="submit" value="Login" name="inisesion" class="btn login_btn">
+                                </div>
                             </div>
                         </form>
                     </div>
