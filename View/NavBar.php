@@ -1,9 +1,6 @@
 <?php
 
  ?>
-<html>
-
-    <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
             <a class="navbar-brand" href="#"> <img class="logo" src="./Imagenes/favicon.ico" height="40"> ELEOSOFT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.php">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#"> Rutas </a></li>
                     <li class="nav-item dropdown">
@@ -29,12 +26,10 @@
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a class="btn ml-2 btn-warning" href="#">Iniciar Sesión</a>
+                        <a class="btn ml-2 btn-warning" href="./index.php?login">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </body>
-</html>
 
 
