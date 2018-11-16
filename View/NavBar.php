@@ -12,14 +12,14 @@
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#"> Documentation </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Rutas </a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Dropdown  </a>
+                        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Mis Viajes  </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"> Menu item 1</a></li>
-                            <li><a class="dropdown-item" href="#"> Menu item 2 </a></li>
+                            <li><a class="dropdown-item" href="#"> Ruta 1</a></li>
+                            <li><a class="dropdown-item" href="#"> Ruta 2 </a></li>
                         </ul>
                     </li>
                     <li>
