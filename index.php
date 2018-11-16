@@ -33,6 +33,7 @@ include("View/NavBar.php");
     include("Controller/loginController.php");
 
 } else {
+    include("View/RouteCard.php");
 
     //Footer de la aplicación
     include("View/footer.php");
