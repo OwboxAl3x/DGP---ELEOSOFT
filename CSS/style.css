@@ -5,10 +5,8 @@ body{
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: start;
 }
 
 html, body {
@@ -70,4 +68,5 @@ input:focus{
 .links a{
     margin-left: 4px;
 }
+
 

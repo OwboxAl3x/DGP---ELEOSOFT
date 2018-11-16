@@ -4,6 +4,7 @@
 
         if(isset($_POST['registrarse'])) {
 
+            // todo: Hay que validar los campos
             $username = $_POST['usuario'];
             $pass = $_POST['contrasenia'];
             $nombre = $_POST['nombre'];

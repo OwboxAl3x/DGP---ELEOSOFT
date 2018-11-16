@@ -12,6 +12,8 @@ session_start();
 //Header de la aplicación
 include("View/header.php");
 
+  include("View/NavBar.php");
+
 //Si no se ha logueado ningun usuario
 if (!isset($_SESSION['usuario'])){
 

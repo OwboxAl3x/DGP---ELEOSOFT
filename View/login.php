@@ -50,7 +50,7 @@
                                 <input type="password" class="form-control" name="contrasenia" placeholder="Contraseña">
                             </div>
                             <div class="row align-items-center remember">
-                                <input type="checkbox">Recordarme
+                                <input type="checkbox">Recuerdame
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="No Login" name="noini" class="btn float-left login_btn">
