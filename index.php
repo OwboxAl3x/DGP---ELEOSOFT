@@ -15,7 +15,11 @@ if (isset($_GET['fuera'])){
     header("location:index.php");
 }
 
+// Menu superior
 include("View/NavBar.php");
+
+// Slider con fotos y titulo
+include("View/Slider.php");
 
 //Si no se ha logueado ningun usuario
 /*if (!isset($_SESSION['usuario'])){
@@ -27,15 +31,19 @@ include("View/NavBar.php");
     //Footer de la aplicación
     include("View/footer.php");
 
-} else */if (isset($_GET['login']) or (isset($_GET['register']))) {
+} else */
+
+
+
+if (isset($_GET['login']) or (isset($_GET['register']))) {
 
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");
 
 } else {
-    include("View/RouteCard.php");
-
-    //Footer de la aplicación
-    include("View/footer.php");
+    //include("View/RouteCard.php");
 
 }
+
+//Footer de la aplicación
+include("View/footer.php");

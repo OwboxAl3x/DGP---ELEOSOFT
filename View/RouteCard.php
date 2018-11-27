@@ -3,9 +3,9 @@
 
 <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 
-
+<div id="logo">Granada</div>
 <div class="container mt-40">
-    <div id="logo">Granada</div>
+
 
     <div class="row mt-30">
         <div class="col-md-4 col-sm-6">
