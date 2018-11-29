@@ -1,34 +1,49 @@
-        <?php
+<?php
 
-            $result = false;
+$result = false;
+echo '<script>console.log("Agregado login")</script>';
 
-            if(isset($_POST['inisesion'])) {
 
-                $username = $_POST['usuario'];
-                $pass = $_POST['contrasenia'];
+if(isset($_POST['inisesion'])) {
 
-                $result = $usuarioLogin->buscarUsuario($username, $pass);
+    $username = $_POST['usuario'];
+    $pass = $_POST['contrasenia'];
 
-                if ($result) {
-                    $_SESSION['usuario'] = $_POST['usuario'];
+    $result = $usuarioLogin->buscarUsuario($username, $pass);
 
-                    header("location:index.php");
-                } else {
+    if ($result) {
+        $_SESSION['usuario'] = $_POST['usuario'];
 
-                    echo 'Ha fallado al loguear al usuario';
+        header("location:index.php");
+    } else {
 
-                }
+        echo 'Ha fallado al loguear al usuario';
 
-            } else if(isset($_POST['noini'])){
+    }
 
-                $_SESSION['usuario'] = "nouser";
+} else if(isset($_POST['noini'])){
 
-                header("location:index.php");
+    $_SESSION['usuario'] = "nouser";
 
-            }
-        ?>
+    header("location:index.php");
 
-        <div class="container">
+}
+?>
+
+<link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
+<link rel="stylesheet" type="text/css" href="../CSS/about_responsive.css">
+
+<!-- Titulo -->
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Granada.jpg"></div>
+    <div class="home_content">
+        <div class="home_title">Iniciar Sesión</div>
+    </div>
+</div>
+
+<div class="intro">
+    <div class="container">
+        <div class="row">
             <div class="d-flex justify-content-center h-100">
                 <div class="card cuadroLogin">
                     <div class="card-header">
@@ -41,7 +56,7 @@
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
                                 <input type="text" class="form-control" name="usuario" placeholder="Usuario">
-                                
+
                             </div>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -70,3 +85,5 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>

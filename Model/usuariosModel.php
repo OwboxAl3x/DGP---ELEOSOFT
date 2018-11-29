@@ -2,6 +2,7 @@
 
 class usuariosModel{
 
+
     private $db;
     private $usuarios;
 

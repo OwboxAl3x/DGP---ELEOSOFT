@@ -1,5 +1,8 @@
 <?php
 ?>
+<link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+<link rel="stylesheet" type="text/css" href="../CSS/slider_styles.css">
+
 <div class="home">
     <div class="home_slider_container">
         <div class="owl-carousel owl-theme home_slider">

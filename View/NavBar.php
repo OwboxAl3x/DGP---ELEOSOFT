@@ -1,5 +1,5 @@
 <?php
-
+    include("./Controller/vars.php");
  ?>
 
 <header class="header">
@@ -33,6 +33,7 @@
                     if (!isset($_SESSION['usuario'])){
 
                         echo '<a class="btn ml-2 btn-warning" href="../index.php?login">Iniciar Sesión</a>';
+
 
                     } else {
 

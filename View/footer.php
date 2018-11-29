@@ -4,6 +4,7 @@
 <script src="../JS/bootstrap.min.js"></script>
 <script src="../Plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="../Plugins/easing/easing.js"></script>
+<script src="../Plugins/parallax-js-master/parallax.min.js"></script>
 <script src="../JS/custom.js"></script>
 
 </body>
