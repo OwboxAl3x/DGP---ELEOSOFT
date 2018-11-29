@@ -28,6 +28,7 @@ if (isset($_GET['login']) or (isset($_GET['register']))) {
     // Ver pagina principal
     include("View/home.php");
 }
+echo '<script>console.log("Debugger Master")</script>';
 
 //Footer de la aplicación
 include("View/footer.php");

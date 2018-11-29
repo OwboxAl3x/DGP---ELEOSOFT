@@ -1,8 +1,6 @@
 <?php
 
 $result = false;
-echo '<script>console.log("Agregado login")</script>';
-
 
 if(isset($_POST['inisesion'])) {
 
@@ -37,17 +35,20 @@ if(isset($_POST['inisesion'])) {
 <div class="home">
     <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Granada.jpg"></div>
     <div class="home_content">
-        <div class="home_title">Iniciar Sesión</div>
+        <div class="home_title">iniciar sesión</div>
     </div>
 </div>
 
 <div class="intro">
     <div class="container">
-        <div class="row">
+        <div>
             <div class="d-flex justify-content-center h-100">
                 <div class="card cuadroLogin">
                     <div class="card-header">
-
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
                     <div class="card-body">
                         <form method="POST">
