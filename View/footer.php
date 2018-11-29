@@ -25,6 +25,8 @@
 <script src="../Plugins/easing/easing.js"></script>
 <script src="../Plugins/parallax-js-master/parallax.min.js"></script>
 <script src="../JS/custom.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+
 
 </body>
 

@@ -24,7 +24,12 @@ if (isset($_GET['login']) or (isset($_GET['register']))) {
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");
 
-} else {
+} else if (isset($_GET['route'])) {
+
+    //Llamar al controlador de la página de login
+    include("View/route.php");
+
+}  else {
     // Ver pagina principal
     include("View/home.php");
 }

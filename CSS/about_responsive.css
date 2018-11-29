@@ -407,6 +407,10 @@
 	{
 		font-size: 13px;
 	}
+	.google_map
+	{
+		height: 75vh;
+	}
 }
 
 /************

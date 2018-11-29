@@ -33,7 +33,7 @@ if(isset($_POST['inisesion'])) {
 
 <!-- Titulo -->
 <div class="home">
-    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Granada.jpg"></div>
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Granada1Vintage.jpg"></div>
     <div class="home_content">
         <div class="home_title">iniciar sesión</div>
     </div>
