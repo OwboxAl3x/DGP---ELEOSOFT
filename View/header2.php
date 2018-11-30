@@ -10,7 +10,7 @@
         <!-- Titulo de la web -->
         <title>EleoSoft</title>
         <!-- Hoja de estilos -->
-        <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+        <link rel="stylesheet" type="text/css" href="../CSS/style2.css"/>
         <!-- Icono de la web -->
         <link rel="icon" href="../Imagenes/favicon.ico" type="image/x-ico"/>
         <!-- JavaScript -->
@@ -18,7 +18,6 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="../CSS/slider_styles.css">
         <link rel="stylesheet" type="text/css" href="../Plugins/OwlCarousel2-2.2.1/owl.carousel.css">
         <link rel="stylesheet" type="text/css" href="../Plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
         <link rel="stylesheet" type="text/css" href="../Plugins/OwlCarousel2-2.2.1/animate.css">
