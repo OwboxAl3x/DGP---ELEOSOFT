@@ -17,13 +17,13 @@ if(isset($_GET['register'])){
 
     include("./View/panelAdmin.php");
 
-//    if (isset($_GET['aniadeL'])){
-//        include("./aniadeLugar.php");
-//    } else if (isset($_GET['aniadeR'])){
-//        include("./aniadeRuta.php");
-//    }else if (isset($_GET['modiL'])){
-//        include("./modificaLugar.php");
-//    }
+    if (isset($_GET['aniadeL'])){
+        include("./View/aniadeLugar.php");
+    } else if (isset($_GET['aniadeR'])){
+        include("./View/aniadeRuta.php");
+    }else if (isset($_GET['modiL'])){
+        include("./View/modificaLugar.php");
+    }
 
 } else if (isset($_GET['login'])) {
 
