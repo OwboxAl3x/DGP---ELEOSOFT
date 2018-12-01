@@ -32,6 +32,7 @@ if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']
 
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");
+    include("Controller/lugaresController.php");
 
 } else if (isset($_GET['route'])) {
 
