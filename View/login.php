@@ -12,7 +12,14 @@
                 if ($result) {
                     $_SESSION['usuario'] = $_POST['usuario'];
 
-                    header("location:index.php");
+                    if ($usuarioAdmin->esAdmin($username, $pass)) {
+                        $_SESSION['admin'] = true;
+
+                        header("location:index.php?admin");
+                    } else {
+                        header("location:index.php");
+                    }
+
                 } else {
 
                     echo 'Ha fallado al loguear al usuario';

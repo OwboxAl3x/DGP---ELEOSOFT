@@ -29,6 +29,22 @@ class usuariosModel{
 
     }
 
+    public function esAdmin($username, $pass){
+
+        $result = $this->db->query("SELECT * FROM Usuario WHERE (login='".$username."') && (pass='".$pass."') && (rol=2);");
+
+        if (!$result) {
+            return false;
+        }
+
+        if ($result->num_rows<1) {
+            return false;
+        }
+
+        return true;
+
+    }
+
     public function registrar($username, $pass, $email, $nombre){
 
         $consulta = $this->db->query("SELECT * FROM Usuario WHERE (login='".$username."') or (email='".$email."');");

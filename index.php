@@ -7,19 +7,28 @@ require("DB/connect.php");
 session_start();
 
 //Header de la aplicación
-include("View/header.php");
+if (isset($_GET['admin'])){
+    include("View/header2.php");
+} else {
+    include("View/header.php");
+}
 
 if (isset($_GET['fuera'])){
     //Libera las variables de SESION
-    //session_unset();
+    session_unset();
     header("location:index.php");
 }
 
 // Menu superior
-include("View/NavBar.php");
+if (isset($_GET['admin'])){
+    include("View/NavBar2.php");
+} else {
+    include("View/NavBar.php");
+}
+
 
 //Si no se ha logueado ningun usuario
-if (isset($_GET['login']) or (isset($_GET['register']))) {
+if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']))) {
 
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");
