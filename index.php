@@ -36,14 +36,17 @@ if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']
 
 } else if (isset($_GET['route'])) {
 
-    //Llamar al controlador de la página de login
     include("View/route.php");
 
-}  else {
+}  else if (isset($_GET['place'])) {
+
+    include("View/place.php");
+
+} else {
     // Ver pagina principal
     include("View/home.php");
 }
-echo '<script>console.log("Debugger Master")</script>';
+echo '<script>console.log("Debugger Master")</script>';  // esto es para debbugerar, eliminar.
 
 //Footer de la aplicación
 include("View/footer.php");

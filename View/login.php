@@ -1,45 +1,48 @@
-        <?php
+<?php
+$result = false;
+if(isset($_POST['inisesion'])) {
+    $username = $_POST['usuario'];
+    $pass = $_POST['contrasenia'];
+    $result = $usuarioLogin->buscarUsuario($username, $pass);
+    if ($result) {
+        $_SESSION['usuario'] = $_POST['usuario'];
 
-            $result = false;
+        if ($usuarioAdmin->esAdmin($username, $pass)) {
+            $_SESSION['admin'] = true;
+            header("location:index.php?admin");
+        } else {
+            header("location:index.php");
+        }
+    } else {
+        echo 'Ha fallado al loguear al usuario';
+    }
+} else if(isset($_POST['noini'])){
+    $_SESSION['usuario'] = "nouser";
+    header("location:index.php");
+}
+?>
 
-            if(isset($_POST['inisesion'])) {
+<link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
+<link rel="stylesheet" type="text/css" href="../CSS/about_responsive.css">
 
-                $username = $_POST['usuario'];
-                $pass = $_POST['contrasenia'];
+<!-- Titulo -->
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Granada1Vintage.jpg"></div>
+    <div class="home_content">
+        <div class="home_title">iniciar sesión</div>
+    </div>
+</div>
 
-                $result = $usuarioLogin->buscarUsuario($username, $pass);
-
-                if ($result) {
-                    $_SESSION['usuario'] = $_POST['usuario'];
-
-                    if ($usuarioAdmin->esAdmin($username, $pass)) {
-                        $_SESSION['admin'] = true;
-
-                        header("location:index.php?admin");
-                    } else {
-                        header("location:index.php");
-                    }
-
-                } else {
-
-                    echo 'Ha fallado al loguear al usuario';
-
-                }
-
-            } else if(isset($_POST['noini'])){
-
-                $_SESSION['usuario'] = "nouser";
-
-                header("location:index.php");
-
-            }
-        ?>
-
-        <div class="container">
+<div class="intro">
+    <div class="container">
+        <div>
             <div class="d-flex justify-content-center h-100">
                 <div class="card cuadroLogin">
                     <div class="card-header">
-
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
                     <div class="card-body">
                         <form method="POST">
@@ -48,7 +51,7 @@
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
                                 <input type="text" class="form-control" name="usuario" placeholder="Usuario">
-                                
+
                             </div>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -77,3 +80,5 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>

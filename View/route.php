@@ -29,7 +29,7 @@
                     <div class="intro_title">Lo que incluye esta ruta...</div>
                     <p class="intro_text">
                         Esta ruta pasa por los siguientes lugares:
-                    <p>Lugar 1: Es bonito</p>
+                    <p><a href="../index.php?place">Lugar 1: Es bonito</a>></p>
                     <p>Lugar 2: Es bonito</p>
                     <p>Lugar 3: Es bonito</p>
                     <p>Lugar 4: Es bonito</p>

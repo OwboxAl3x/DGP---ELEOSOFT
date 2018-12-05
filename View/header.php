@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="sp">
 <html>
 
     <head>
@@ -7,6 +8,7 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Eleosoft Project">
         <!-- Titulo de la web -->
         <title>EleoSoft</title>
         <!-- Hoja de estilos -->
@@ -22,6 +24,7 @@
         <link rel="stylesheet" type="text/css" href="../Plugins/OwlCarousel2-2.2.1/owl.carousel.css">
         <link rel="stylesheet" type="text/css" href="../Plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
         <link rel="stylesheet" type="text/css" href="../Plugins/OwlCarousel2-2.2.1/animate.css">
+        <link href="../Plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
 
 

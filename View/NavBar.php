@@ -1,5 +1,4 @@
 <?php
-
  ?>
 
 <header class="header">
@@ -17,8 +16,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Mis Viajes  </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"> Ruta 1</a></li>
-                        <li><a class="dropdown-item" href="#"> Ruta 2 </a></li>
+                        <li><a class="dropdown-item" href="../index.php?route"> Ruta 1</a></li>
+                        <li><a class="dropdown-item" href="../index.php?route"> Ruta 2 </a></li>
                     </ul>
                 </li>
                 <li>
