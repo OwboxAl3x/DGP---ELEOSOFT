@@ -29,11 +29,11 @@
                     <div class="intro_title">Lo que incluye esta ruta...</div>
                     <p class="intro_text">
                         Esta ruta pasa por los siguientes lugares:
-                    <p><a href="../index.php?place">Lugar 1: Es bonito</a>></p>
-                    <p>Lugar 2: Es bonito</p>
-                    <p>Lugar 3: Es bonito</p>
-                    <p>Lugar 4: Es bonito</p>
-                    <p>Lugar 5: Es bonito</p>
+                        <p><a href="../index.php?place">Lugar 1: Es bonito</a></p>
+                        <p>Lugar 2: Es bonito</p>
+                        <p>Lugar 3: Es bonito</p>
+                        <p>Lugar 4: Es bonito</p>
+                        <p>Lugar 5: Es bonito</p>
                     </p>
                     <div class="button intro_button"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
                 </div>

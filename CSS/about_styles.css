@@ -795,13 +795,13 @@ section
 {
 	width: 100%;
 	padding-top: 92px;
-	padding-bottom: 105px;
+	padding-bottom: 205px;
 	background: #f6f9fb;
 }
 .intro_image
 {
 	position: absolute;
-    right: 0;
+    center: 0;
     top: 13px;
 }
 .intro_title
@@ -1428,5 +1428,6 @@ section
 	font-family: 'Beyond';
 	font-size: 100px;
 	color: #FFFFFF;
-	margin-top: -30px;
+	margin-top: -0px;
+	word-break: keep-all;
 }
