@@ -12,7 +12,8 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="./index.php">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#"> Rutas </a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.php?routesMenu"> Rutas </a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.php?placesMenu"> Lugares </a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Mis Viajes  </a>
                     <ul class="dropdown-menu">

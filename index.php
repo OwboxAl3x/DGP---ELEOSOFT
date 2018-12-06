@@ -42,6 +42,14 @@ if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']
 
     include("View/place.php");
 
+} else if (isset($_GET['placesMenu'])) {
+
+    include("View/placesMenu.php");
+
+} else if (isset($_GET['routesMenu'])) {
+
+    include("View/routesMenu.php");
+
 } else {
     // Ver pagina principal
     include("View/home.php");

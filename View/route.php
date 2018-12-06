@@ -1,6 +1,6 @@
 <?php
     // TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion de la ruta y colocarla en variables
-
+    $logged = true;
 ?>
 
 <link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
@@ -50,4 +50,30 @@
         </div>
     </div>
 </div>
+
+<?php
+ if ($logged) {
+     echo('<div class="contact_form_section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Contact Form -->
+                <div class="contact_form_container">
+                    <div class="contact_title text-center">Realizar recomendacion</div>
+                    <form action="#" id="contact_form" class="contact_form text-center">
+                        <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Nombre" required="required" data-error="Name is required.">
+                        <input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
+                        <input type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Titulo" required="required" data-error="Subject is required.">
+                        <textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Mensaje" required="required" data-error="Please, write us a message."></textarea>
+                        <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar recomendación<span></span><span></span><span></span></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>');
+ }
+?>
 
