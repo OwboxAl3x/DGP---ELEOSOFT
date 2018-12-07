@@ -62,6 +62,24 @@ class lugaresModel {
 
     }
 
+    public function visitarLugar($login){
+
+        $result = $this->db->query("Select U.IDusuario, U.nombre
+                                    From usuario U
+                                    INNER JOIN visita V
+                                    ON U.idusuario = V.Idusuario
+                                    WHERE IDusuario ='".$login."';");
+        if (!$result) {
+            return false;
+        }
+
+        if ($result->num_rows<1) {
+            return false;
+        }
+
+        return true;
+    }
+
 }
 
 ?>
