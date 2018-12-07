@@ -6,5 +6,6 @@ include("./Model/lugaresModel.php");
 $lugarExiste = new lugaresModel();
 $lugarRegistrar = new lugaresModel();
 $lugarEditar = new lugaresModel();
+$lugarVisitar = new lugaresModel();
 
 ?>
