@@ -12,6 +12,48 @@ class lugaresModel {
 
     }
 
+    public function selectLugar($id)
+    {
+        $result = $this->db->query("SELECT * FROM Lugar WHERE idlugar = '$id'");
+
+        if (!$result) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->lugares[]=$filas;
+        }
+
+        return $this->lugares;
+
+    }
+
+    public function eliminaLugar($id)
+    {
+        $result = $this->db->query("DELETE FROM Lugar WHERE idlugar = '$id'");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function mostrarLugares(){
+        $result = $this->db->query("SELECT * FROM Lugar ORDER BY NOMBRE");
+
+        if (!$result){
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->lugares[]=$filas;
+        }
+
+        return $this->lugares;
+
+    }
+
     public function buscarLugar($name){
 
         $result = $this->db->query("SELECT * FROM Lugar WHERE nombre='".$name."';");
@@ -28,7 +70,7 @@ class lugaresModel {
 
     }
 
-    public function registrarLugar($name, $ubicacion, $descripcion){
+    public function registrarLugar($name, $ubicacion, $descripcion, $puntuacion){
 
         $consulta = $this->db->query("SELECT * FROM Lugar WHERE nombre='".$name."';");
 
@@ -40,8 +82,8 @@ class lugaresModel {
             return false;
         }
 
-        $consulta = $this->db->query("INSERT INTO Lugar (nombre, ubicacion, descripcion) VALUES ('".$name."', '".$ubicacion."', '".$descripcion."');");
-
+        $consulta = $this->db->query("INSERT INTO Lugar (nombre, ubicacion, descripcion, puntuacion) VALUES ('".$name."', '".$ubicacion."', '".$descripcion."', '".$puntuacion."');");
+        
         if(!$consulta){
             return false;
         }
@@ -50,9 +92,9 @@ class lugaresModel {
 
     }
 
-    public function editarLugar($idLugar, $name, $ubicacion, $descripcion){
+    public function editarLugar($idLugar, $name, $ubicacion, $descripcion, $puntuacion){
 
-        $result = $this->db->query("UPDATE lugar SET nombre='".$name."', ubicacion='".$ubicacion."', descripcion='".$descripcion."' WHERE idLugar='".$idLugar."';");
+        $result = $this->db->query("UPDATE lugar SET nombre='".$name."', ubicacion='".$ubicacion."', descripcion='".$descripcion."', puntuacion='".$puntuacion."' WHERE idLugar='".$idLugar."';");
 
         if (!$result) {
             return false;
@@ -60,24 +102,6 @@ class lugaresModel {
 
         return true;
 
-    }
-
-    public function visitarLugar($login){
-
-        $result = $this->db->query("Select U.IDusuario, U.nombre
-                                    From usuario U
-                                    INNER JOIN visita V
-                                    ON U.idusuario = V.Idusuario
-                                    WHERE IDusuario ='".$login."';");
-        if (!$result) {
-            return false;
-        }
-
-        if ($result->num_rows<1) {
-            return false;
-        }
-
-        return true;
     }
 
 }

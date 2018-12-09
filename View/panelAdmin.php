@@ -14,8 +14,7 @@
     <div class="card-body">
       <h5 class="card-title">Lugares</h5>
       <p class="card-text"> <a href="index.php?admin&aniadeL"> Añadir Lugar </a> </p>
-      <p class="card-text"> <a href="index.php?admin&modiL"> Modificar Lugar </a> </p>
-      <p class="card-text"> <a href="#"> Eliminar Lugar </a> </p>
+      <p class="card-text"> <a href="index.php?admin&m_e_L"> Modificar/Eliminar Lugar </a> </p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>

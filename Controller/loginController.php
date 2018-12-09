@@ -21,8 +21,8 @@ if(isset($_GET['register'])){
         include("./View/aniadeLugar.php");
     } else if (isset($_GET['aniadeR'])){
         include("./View/aniadeRuta.php");
-    }else if (isset($_GET['modiL'])){
-        include("./View/modificaLugar.php");
+    }else if (isset($_GET['m_e_L'])){
+        include("./View/m_e_L.php");
     }
 
 } else if (isset($_GET['login'])) {
