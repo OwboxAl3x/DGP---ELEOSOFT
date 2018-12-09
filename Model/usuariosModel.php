@@ -67,6 +67,33 @@ class usuariosModel{
 
     }
 
+    public function eliminaUser($idUsuario)
+    {
+        $result = $this->db->query("UPDATE usuario SET activo=0 WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function selectUser($idUsuario)
+    {
+        $result = $this->db->query("SELECT * FROM usuario WHERE idUsuario = '".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->usuarios[]=$filas;
+        }
+
+        return $this->usuarios;
+
+    }
+
 }
 
 ?>

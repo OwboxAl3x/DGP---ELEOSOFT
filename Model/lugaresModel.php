@@ -14,7 +14,7 @@ class lugaresModel {
 
     public function selectLugar($id)
     {
-        $result = $this->db->query("SELECT * FROM Lugar WHERE idlugar = '$id'");
+        $result = $this->db->query("SELECT * FROM Lugar WHERE idLugar = '".$id."';");
 
         if (!$result) {
             return false;
@@ -28,9 +28,9 @@ class lugaresModel {
 
     }
 
-    public function eliminaLugar($id)
+    public function eliminaLugar($idLugar)
     {
-        $result = $this->db->query("DELETE FROM Lugar WHERE idlugar = '$id'");
+        $result = $this->db->query("UPDATE lugar SET activo=0 WHERE idLugar='".$idLugar."';");
 
         if (!$result) {
             return false;

@@ -6,6 +6,7 @@ include("./Model/usuariosModel.php");
 $usuarioLogin = new usuariosModel();
 $usuarioAdmin = new usuariosModel();
 $usuarioRegistro = new usuariosModel();
+$usuarioEliminar = new usuariosModel();
 
 
 if(isset($_GET['register'])){
