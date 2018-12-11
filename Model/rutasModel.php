@@ -30,9 +30,24 @@ class rutasModel {
         return true;
     }
 
+    public function mostrarRutas(){
+        $result = $this->db->query("SELECT * FROM Ruta ORDER BY NOMBRE");
+
+        if (!$result){
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->rutas[]=$filas;
+        }
+
+        return $this->rutas;
+
+    }
+
     public function registrarRuta($name, $descripcion, $puntuacion){
 
-        $consulta = $this->db->query("SELECT * FROM ruta WHERE nombre='".$name."';");
+        $consulta = $this->db->query("SELECT * FROM Ruta WHERE nombre='".$name."';");
 
         if(!$consulta){
             return false;
@@ -42,7 +57,7 @@ class rutasModel {
             return false;
         }
 
-        $consulta = $this->db->query("INSERT INTO ruta (nombre, descripcion, puntuacion) VALUES ('".$name."', '".$descripcion."', '".$puntuacion."');");
+        $consulta = $this->db->query("INSERT INTO Ruta (nombre, descripcion, puntuacion) VALUES ('".$name."', '".$descripcion."', '".$puntuacion."');");
 
         if(!$consulta){
             return false;
@@ -54,7 +69,7 @@ class rutasModel {
 
     public function editarRuta($idRuta, $name, $descripcion, $puntuacion){
 
-        $result = $this->db->query("UPDATE ruta SET nombre='".$name."', descripcion='".$descripcion."', puntuacion='".$puntuacion."' WHERE idRuta='".$idRuta."';");
+        $result = $this->db->query("UPDATE Ruta SET nombre='".$name."', descripcion='".$descripcion."', puntuacion='".$puntuacion."' WHERE idRuta='".$idRuta."';");
 
         if (!$result) {
             return false;
@@ -66,13 +81,40 @@ class rutasModel {
 
     public function eliminaRuta($idRuta)
     {
-        $result = $this->db->query("UPDATE ruta SET activo=0 WHERE idRuta='".$idRuta."';");
+        $result = $this->db->query("UPDATE Ruta SET activo=0 WHERE idRuta='".$idRuta."';");
 
         if (!$result) {
             return false;
         }
 
         return true;
+    }
+
+    public function activarRuta($idRuta)
+    {
+        $result = $this->db->query("UPDATE Ruta SET activo=1 WHERE idRuta='".$idRuta."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function selectRuta($id)
+    {
+        $result = $this->db->query("SELECT * FROM Ruta WHERE idruta = '".$id."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->rutas[]=$filas;
+        }
+
+        return $this->rutas;
+
     }
 
 }

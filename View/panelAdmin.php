@@ -22,8 +22,7 @@
     <div class="card-body">
       <h5 class="card-title">Rutas</h5>
       <p class="card-text"> <a href="index.php?admin&aniadeR"> Añadir Ruta </a> </p>
-      <p class="card-text"> <a href="#"> Modificar Ruta </a> </p>
-      <p class="card-text"> <a href="#"> Eliminar Ruta </a> </p>
+      <p class="card-text"> <a href="index.php?admin&m_e_R"> Modificar/Eliminar/Activar Ruta </a> </p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>

@@ -1,25 +1,51 @@
+<?php
+$result = false;
 
-<form>
 
-    <div class="form-group">
-        <label for="nombre_ruta" class="control-label">Nombre:</label>
-        <input type="text" class="form-control" name="nombre" placeholder="Ruta de San Bernardo">
-    </div>
+//Comprueba de que los campos obligatorios están introducidos
+if(isset($_POST['aniade'])){
 
-    <div class="form-group">
-        <label for="descripcion_ruta" class="control-label">Descripción</label>
-        <input type="text" class="form-control" name="descripcion_ruta" placeholder="Esta ruta se encuentra en un pueblo de...">
-    </div>
+    $name = $_POST['nom'];
+    $descripcion = $_POST['desc'];
+    $puntuacion='0';
 
-    <div class="custom-file">
-      <label for="descripcion_lugar" class="control-label">Añadir Recurso:</label>
-      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-      <label class="custom-file-label" for="customFileLang">Añadir recurso</label>
-    </div>
 
-    <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Añadir Lugar</button>
-    </div>
+    $result = $rutaAniade->registrarRuta($name, $descripcion, $puntuacion);
 
+    if($result){
+        echo "Inserción bien realizada";
+    }
+    else if(!$result)
+        echo "Inserción mal realizada";
+    else
+        echo "algo pasa aqui";
+
+}
+?>
+
+<h4>Añadir ruta: <br> <br> </h4>
+
+<form method="post">
+
+<div class="form-group">
+    <label for="nom" class="control-label">Nombre:</label>
+
+    <input type="text" class="form-control" name="nom"
+    placeholder="Nombre Ruta. Ej: Ruta de la tapa">
+
+</div>
+
+
+<div class="form-group">
+    <label for="desc" class="control-label">Descripción</label>
+
+    <input type="text" class="form-control" name="desc"
+    placeholder="En esta ruta podremos encontrar todo tipo de gastronimía...">
+
+</div>
+
+<div class="form-group"> <!-- Submit Button -->
+    <button type="submit" name="aniade" class="btn btn-primary">Añadir Lugar</button>
+</div>
 
 </form>

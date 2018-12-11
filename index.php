@@ -27,13 +27,14 @@ if (isset($_GET['admin'])){
 }
 
 include("Controller/lugaresController.php");
+include("Controller/rutasController.php");
 
 //Si no se ha logueado ningun usuario
 if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']))) {
 
     //Llamar al controlador de la página de login
     include("Controller/loginController.php");
-    
+
 
 } else if (isset($_GET['route'])) {
 
