@@ -9,6 +9,7 @@ $rutaEditar = new rutasModel();
 $rutaRegistrar = new rutasModel();
 $rutaEliminar = new rutasModel();
 $rutaActivar = new rutasModel();
+$rutaDesactivar = new rutasModel();
 $rutaSeleccionar = new rutasModel();
 
 ?>

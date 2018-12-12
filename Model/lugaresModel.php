@@ -39,6 +39,28 @@ class lugaresModel {
         return true;
     }
 
+    public function activarLugar($idLugar)
+    {
+        $result = $this->db->query("UPDATE Lugar SET activo=1 WHERE idLugar='".$idLugar."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function descactivarLugar($idLugar)
+    {
+        $result = $this->db->query("UPDATE Lugar SET activo=0 WHERE idLugar='".$idLugar."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
     public function mostrarLugares(){
         $result = $this->db->query("SELECT * FROM Lugar ORDER BY NOMBRE");
 

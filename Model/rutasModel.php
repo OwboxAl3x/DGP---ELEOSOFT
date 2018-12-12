@@ -100,6 +100,16 @@ class rutasModel {
 
         return true;
     }
+    public function desactivarRuta($idRuta)
+    {
+        $result = $this->db->query("UPDATE Ruta SET activo=0 WHERE idRuta='".$idRuta."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
 
     public function selectRuta($id)
     {

@@ -2,7 +2,8 @@
 
 //Llamada al modelo
 include("./Model/lugaresModel.php");
-
+$lugarActivar = new lugaresModel();
+$lugarDesactivar = new lugaresModel();
 $lugarExiste = new lugaresModel();
 $lugarRegistrar = new lugaresModel();
 $lugarEditar = new lugaresModel();

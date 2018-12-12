@@ -51,9 +51,32 @@ if(isset($_POST['accion2'])){
 
   
   $id = $_POST['id'];
-  echo $id;
   
   $result = $lugarEliminar->eliminaLugar($id);
+
+  if($result)
+      echo "Inserción realizada";
+  else if(!$result)
+      echo "La inserción no ha sido posible";
+}
+if(isset($_POST['accion3'])){
+
+  
+  $id = $_POST['id'];
+  
+  $result = $lugarActivar->activarLugar($id);
+
+  if($result)
+      echo "Inserción realizada";
+  else if(!$result)
+      echo "La inserción no ha sido posible";
+}
+if(isset($_POST['accion4'])){
+
+  
+  $id = $_POST['id'];
+  
+  $result = $lugarDesactivar->descactivarLugar($id);
 
   if($result)
       echo "Inserción realizada";
@@ -71,6 +94,7 @@ if(isset($_POST['accion2'])){
       <th scope="col">Descripcion</th>
       <th scope="col">Ubicación</th>
       <th scope="col">Puntuación</th>
+      <th scope="col">Activado</th>
       <th scope="col">Mod/Elim</th>
     </tr>
   </thead>
@@ -86,11 +110,29 @@ if(isset($_POST['accion2'])){
       echo '<td>' . $result[$i]["descripcion" ] . '</td>';
       echo '<td>' . $result[$i]["ubicacion" ] . '</td>';
       echo '<td>' . $result[$i]["puntuacion" ] . '</td>';
-      echo '<td>  <form method="post">
+      if($result[$i]["activo" ]==1)
+      {
+        $valor="Activado";
+        echo '<td>' . $valor . '</td>';
+        echo '<td>  <form method="post">
               <input type="hidden" name="id" value="' ;echo $result[$i]['IDlugar']; echo '" />
               <input type="submit" name="accion1" value="Editar"> <br>
               <input type="submit" name="accion2" value="Borrar">
+              <input type="submit" name="accion4" value="Desactivar">
               </form> </td>';
+      }
+      if($result[$i]["activo" ]==0)
+      {
+        $valor="Desactivado";
+        echo '<td>' . $valor . '</td>';
+        echo '<td>  <form method="post">
+              <input type="hidden" name="id" value="' ;echo $result[$i]['IDlugar']; echo '" />
+              <input type="submit" name="accion1" value="Editar"> <br>
+              <input type="submit" name="accion2" value="Borrar">
+              <input type="submit" name="accion3" value="Activar">
+              </form> </td>';
+      }
+      
     echo '<tr>';
   }
 
