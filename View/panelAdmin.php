@@ -32,7 +32,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Sugerencias</h5>
-      <p class="card-text"> <a href="#"> Ver Sugerencias </a> </p>
+      <p class="card-text"> <a href="index.php?admin&ver_sugerencias"> Ver Sugerencias </a> </p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>

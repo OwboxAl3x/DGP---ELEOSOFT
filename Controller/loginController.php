@@ -26,7 +26,10 @@ if(isset($_GET['register'])){
         include("./View/m_e_L.php");
     }else if (isset($_GET['m_e_R'])){
         include("./View/m_e_R.php");
+    }else if (isset($_GET['ver_sugerencias'])){
+        include("./View/ver_sugerencias.php");
     }
+
 
 } else if (isset($_GET['login'])) {
 

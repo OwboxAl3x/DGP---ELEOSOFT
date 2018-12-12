@@ -28,6 +28,7 @@ if (isset($_GET['admin'])){
 
 include("Controller/lugaresController.php");
 include("Controller/rutasController.php");
+include("Controller/sugerenciasController.php");
 
 //Si no se ha logueado ningun usuario
 if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']))) {
