@@ -11,5 +11,6 @@ $rutaEliminar = new rutasModel();
 $rutaActivar = new rutasModel();
 $rutaDesactivar = new rutasModel();
 $rutaSeleccionar = new rutasModel();
+$rutaBuscada = new rutasModel();
 
 ?>

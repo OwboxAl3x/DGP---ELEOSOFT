@@ -4,6 +4,7 @@ class rutasModel {
 
     private $db;
     private $rutas;
+    private $ruta;  // Campos: IDruta nombre descripcion puntuacion activo
 
     public function __construct(){
 
@@ -64,7 +65,26 @@ class rutasModel {
         }
 
         return true;
+    }
 
+    public function buscarRuta($name){
+
+        $consulta = $this->db->query("SELECT * FROM Ruta WHERE nombre='".$name."';");
+
+        if(!$consulta){
+            return false;
+        }
+
+        if($consulta->num_rows>0){
+            // Obtener los valores de las columnas de ruta
+            while($filas=$consulta->fetch_assoc()){
+                $this->ruta=$filas;  // Solo debería haber una ruta.
+            }
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function editarRuta($idRuta, $name, $descripcion, $puntuacion){

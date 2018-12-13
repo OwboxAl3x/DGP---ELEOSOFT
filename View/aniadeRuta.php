@@ -18,7 +18,7 @@ if(isset($_POST['aniade'])){
     else if(!$result)
         echo "Inserción mal realizada";
     else
-        echo "algo pasa aqui";
+        echo "algo pasa aqui";  // XD
 
 }
 ?>
