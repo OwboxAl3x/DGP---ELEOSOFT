@@ -6,8 +6,14 @@ include("./Model/usuariosModel.php");
 $usuarioLogin = new usuariosModel();
 $usuarioAdmin = new usuariosModel();
 $usuarioRegistro = new usuariosModel();
-$usuarioEliminar = new usuariosModel();
-
+$usuarioMostrar = new usuariosModel();
+$adminMostrar = new usuariosModel();
+$usuarioActivar = new usuariosModel();
+$adminActivar = new usuariosModel();
+$usuarioDesactivar = new usuariosModel();
+$adminDesactivar = new usuariosModel();
+$usuarioBorrar = new usuariosModel();
+$adminBorrar = new usuariosModel();
 
 if(isset($_GET['register'])){
 
@@ -28,6 +34,10 @@ if(isset($_GET['register'])){
         include("./View/m_e_R.php");
     }else if (isset($_GET['ver_sugerencias'])){
         include("./View/ver_sugerencias.php");
+    }else if (isset($_GET['gestUs'])){
+        include("./View/gestUs.php");
+    }else if (isset($_GET['gestAd'])){
+        include("./View/gestAd.php");
     }
 
 

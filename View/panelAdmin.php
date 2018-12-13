@@ -4,9 +4,8 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Usuarios</h5>
-      <p class="card-text"> <a href="#"> Eliminar Usuario </a> </p>
-      <p class="card-text"> <a href="#"> Añadir Adimnistrador </a> </p>
-      <p class="card-text"> <a href="#"> Eliminar Adimnistrador </a> </p>
+      <p class="card-text"> <a href="index.php?admin&gestUs"> Gestionar Usuarios</a> </p>
+      <p class="card-text"> <a href="index.php?admin&gestAd">  Añadir/Eliminar Adimnistradores </a> </p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>

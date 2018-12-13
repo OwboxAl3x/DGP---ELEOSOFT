@@ -13,6 +13,114 @@ class usuariosModel{
 
     }
 
+    public function mostrarUser()
+    {
+        $result = $this->db->query("SELECT * FROM Usuario WHERE rol=1;");
+
+        if (!$result) {
+            return false;
+        }
+
+        if ($result->num_rows<1) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->usuarios[]=$filas;
+        }
+
+        return $this->usuarios;
+
+    }
+    public function mostrarAdmin()
+    {
+        $result = $this->db->query("SELECT * FROM Usuario WHERE rol=2;");
+
+        if (!$result) {
+            return false;
+        }
+
+        if ($result->num_rows<1) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->usuarios[]=$filas;
+        }
+
+        return $this->usuarios;
+
+    }
+    
+
+    public function desactivarUser($idUsuario)
+    {
+        $result = $this->db->query("UPDATE Usuario SET activo=0 WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+
+    public function desactivarAdmin($idUsuario)
+    {
+        $result = $this->db->query("UPDATE Usuario SET activo=0 WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+
+    public function activarUser($idUsuario)
+    {
+        $result = $this->db->query("UPDATE Usuario SET activo=1 WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function activarAdmin($idUsuario)
+    {
+        $result = $this->db->query("UPDATE Usuario SET activo=1 WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function borrarUser($idUsuario)
+    {
+        $result = $this->db->query("DELETE FROM Usuario WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+    public function borrarAdmin($idUsuario)
+    {
+        $result = $this->db->query("DELETE FROM Usuario WHERE idUsuario='".$idUsuario."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+    }
+
+
     public function buscarUsuario($username, $pass){
 
         $result = $this->db->query("SELECT * FROM Usuario WHERE (login='".$username."') && (pass='".$pass."');");
@@ -67,16 +175,6 @@ class usuariosModel{
 
     }
 
-    public function eliminaUser($idUsuario)
-    {
-        $result = $this->db->query("UPDATE usuario SET activo=0 WHERE idUsuario='".$idUsuario."';");
-
-        if (!$result) {
-            return false;
-        }
-
-        return true;
-    }
 
     public function selectUser($idUsuario)
     {
