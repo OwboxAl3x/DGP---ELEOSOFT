@@ -53,6 +53,14 @@ if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']
 
     include("View/routesMenu.php");
 
+} else if (isset($_GET['ValoracionLugarView'])) {
+
+    include("View/ValoracionLugarView.php");
+
+} else if (isset($_GET['ValoracionRutaView'])) {
+
+    include("View/ValoracionRutaView.php");
+
 } else {
     // Ver pagina principal
     include("View/home.php");
