@@ -12,39 +12,54 @@ class valoracionesModel {
 
     }
 
-        public function rutaValoracion($nombre, $puntuacion, $descripcion){
-        $result = $this->db->query("SELECT * FROM ruta WHERE nombre='".$nombre."';");
+        public function rutaRealizadaValoracion ($idruta, $idusuario, $puntuacion, $comentario){
+
+        $result = $this->db->query("UPDATE realiza SET puntuacion ='".$puntuacion."', comentario='".$comentario."' WHERE idruta='".$idruta."' and idusuario='".$idusuario."';");
         
         if(!$result){
             return false;
         }
-        if($result->num_rows>0){
-            return false;
-        }
-        $result = $this->db->query("INSERT INTO ruta (nombre, puntuacion, descripcion) VALUES ('".$nombre."', '".$puntuacion."', '".$descripcion."');");
-        
-        if(!$result){
-            return false;
-        }
+
         return true;
-    }
+        
+        }
 
 
-        public function lugarValoracion($nombre, $puntuacion, $descripcion){
-        $result = $this->db->query("SELECT * FROM lugar WHERE nombre='".$nombre."';");
+        public function puntuacionTotalRuta ($idruta){
+
+        	$result = $this->db->query ("UPDATE ruta SET idruta, puntuacion SELECT idruta, AVG(puntuacion) from realiza WHERE idruta='".$idruta."' group by idruta;");
+
+        	if (!$result) {
+            return false;
+        }
         
-        if(!$result){
-            return false;
-        }
-        if($result->num_rows>0){
-            return false;
-        }
-        $result = $this->db->query("INSERT INTO lugar (nombre, puntuacion, descripcion) VALUES ('".$nombre."', '".$puntuacion."', '".$descripcion."');");
-        
-        if(!$result){
-            return false;
-        }
         return true;
-    }
-}
-?>
+    
+        }
+        
+
+        public function lugarVisitadoValoracion ($idlugar, $idusuario, $puntuacion, $comentario){
+
+        $result = $this->db->query("UPDATE visita SET puntuacion ='".$puntuacion."', comentario='".$comentario."' 
+        	WHERE idlugar='".$idlugar."' and idusuario='".$idusuario."';");
+        
+        if(!$result){
+            return false;
+        }
+
+        return true;
+        
+        }
+
+
+        public function puntuacionTotalLugar ($idlugar){
+
+        	$result = $this->db->query ("UPDATE lugar SET idlugar, puntuacion SELECT idlugar, AVG(puntuacion) from visita WHERE idlugar='".$idlugar."' group by idlugar;");
+
+        	if (!$result) {
+            return false;
+        }
+        
+        return true;
+    
+        }

@@ -12,13 +12,14 @@ class rutasModel {
 
     }
 
-    public function realizaRuta($login){
+    public function realizaRuta($login, $ID){
 
         $result = $this->db->query("Select U.IDusuario, U.nombre
                                     From usuario U
                                     INNER JOIN realiza R
-                                    ON U.idusuario = R.Idusuario
-                                    WHERE IDusuario ='".$login."';");
+                                    ON U.IDusuario = R.IDusuario
+                                    WHERE IDusuario ='".$login."'
+                                    and IDruta ='".$ID."';");
         if (!$result) {
             return false;
         }

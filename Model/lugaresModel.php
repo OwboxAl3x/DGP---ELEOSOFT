@@ -142,6 +142,25 @@ class lugaresModel {
 
     }
 
+    public function visitaLugar($login, $ID){
+
+        $result = $this->db->query("Select U.IDusuario, U.nombre
+                                    From usuario U
+                                    INNER JOIN visita V
+                                    ON U.IDusuario = V.IDusuario
+                                    WHERE IDusuario ='".$login."'
+                                    and IDlugar ='".$ID."';");
+        if (!$result) {
+            return false;
+        }
+
+        if ($result->num_rows<1) {
+            return false;
+        }
+
+        return true;
+    }
+
 }
 
 ?>

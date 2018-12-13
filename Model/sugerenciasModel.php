@@ -162,6 +162,52 @@ class sugerenciasModel {
 
     }
 
+    //Añade la nueva sugerencia de lugar y ruta
+
+    public function NuevaSugeLugar($name, $descripcion, $latitud, $longitud){
+
+        $consulta = $this->db->query("SELECT * FROM sugerencialugar WHERE nombre='".$name."';");
+
+        if(!$consulta){
+            return false;
+        }
+
+        if($consulta->num_rows>0){
+            return false;
+        }
+
+        $consulta = $this->db->query("INSERT INTO sugerencialugar (nombre, descripcion, latitud, longitud) VALUES ('".$name."', '".$descripcion."', '".$latitud."', '".$longitud."');");
+        
+        if(!$consulta){
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public function NuevaSugeRuta($name, $descripcion){
+
+        $consulta = $this->db->query("SELECT * FROM sugerenciaruta WHERE nombre='".$name."';");
+
+        if(!$consulta){
+            return false;
+        }
+
+        if($consulta->num_rows>0){
+            return false;
+        }
+
+        $consulta = $this->db->query("INSERT INTO sugerenciaruta (nombre, descripcion) VALUES ('".$name."', '".$descripcion."');");
+        
+        if(!$consulta){
+            return false;
+        }
+
+        return true;
+
+    }
+
 }
 
 ?>
