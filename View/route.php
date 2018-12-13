@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/Alhambra3Vintage.jpg" width="400" alt=""></div>
+                <div class="intro_image"><img src="../Imagenes/Alhambra3Vintage.jpg" width="400" alt="Foto de Alhambra Vintage"></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
@@ -30,12 +30,14 @@
                     <p class="intro_text">
                         Esta ruta pasa por los siguientes lugares:
                         <p><a href="../index.php?place">Lugar 1: Es bonito</a></p>
-                        <p>Lugar 2: Es bonito</p>
-                        <p>Lugar 3: Es bonito</p>
-                        <p>Lugar 4: Es bonito</p>
-                        <p>Lugar 5: Es bonito</p>
-                    </p>
+                        <p><a href="../index.php?place">Lugar 2: Es bonito</a></p>
+                        <p><a href="../index.php?place">Lugar 3: Es bonito</a></p>
+                        <p><a href="../index.php?place">Lugar 4: Es bonito</a></p>
+                        <p><a href="../index.php?place">Lugar 5: Es bonito</a></p>
+
+
                     <div class="button intro_button"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
+                    </p>
                 </div>
             </div>
         </div>
