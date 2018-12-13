@@ -28,6 +28,22 @@ class lugaresModel {
 
     }
 
+    public function selectLugarPorNombre($name)
+    {
+        $result = $this->db->query("SELECT * FROM Lugar WHERE nombre = '".$name."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->lugares[]=$filas;
+        }
+
+        return $this->lugares;
+
+    }
+
     public function eliminaLugar($idLugar)
     {
         $result = $this->db->query("UPDATE lugar SET activo=0 WHERE idLugar='".$idLugar."';");
@@ -62,7 +78,7 @@ class lugaresModel {
     }
 
     public function mostrarLugares(){
-        $result = $this->db->query("SELECT * FROM Lugar ORDER BY NOMBRE");
+        $result = $this->db->query("SELECT * FROM Lugar ORDER BY IDlugar");
 
         if (!$result){
             return false;

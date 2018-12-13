@@ -10,5 +10,6 @@ $lugarEditar = new lugaresModel();
 $lugaresMostrar = new lugaresModel();
 $lugarEliminar = new lugaresModel();
 $lugarSeleccionar = new lugaresModel();
+$lugarParaRuta = new lugaresModel();
 
 ?>

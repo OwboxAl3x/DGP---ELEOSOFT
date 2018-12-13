@@ -4,7 +4,6 @@ class rutasModel {
 
     private $db;
     public $rutas;
-    public $ruta;  // Campos: IDruta nombre descripcion puntuacion activo
 
     public function __construct(){
 
@@ -38,10 +37,8 @@ class rutasModel {
             return false;
         }
 
-        $i = 0;
         while($filas=$result->fetch_assoc()){
-            $this->rutas[$i]=$filas;
-            $i = $i + 1;
+            $this->rutas[]=$filas;
         }
 
         return $this->rutas;
@@ -77,16 +74,11 @@ class rutasModel {
             return false;
         }
 
-        if($consulta->num_rows>0){
-            // Obtener los valores de las columnas de ruta
-            while($filas=$consulta->fetch_assoc()){
-                $this->ruta=$filas;  // Solo debería haber una ruta.
-            }
-
-            return true;
-        } else {
-            return false;
+        while($filas=$consulta->fetch_assoc()){
+            $this->rutas[]=$filas;
         }
+
+        return $this->rutas;
     }
 
     public function editarRuta($idRuta, $name, $descripcion, $puntuacion){
@@ -122,6 +114,7 @@ class rutasModel {
 
         return true;
     }
+
     public function desactivarRuta($idRuta)
     {
         $result = $this->db->query("UPDATE Ruta SET activo=0 WHERE idRuta='".$idRuta."';");
@@ -147,6 +140,17 @@ class rutasModel {
 
         return $this->rutas;
 
+    }
+
+    public function aniadirLugaresRuta($idRuta, $idLugar, $pos)
+    {
+        $result = $this->db->query("INSERT INTO aparece(IDruta, IDlugar, posicion) VALUES ('".$idRuta."', '".$idLugar."', '".$pos."');");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
     }
 
 }
