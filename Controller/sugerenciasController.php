@@ -12,5 +12,6 @@ $sugeRPendientes = new sugerenciasModel();
 $sugeLPendientes = new sugerenciasModel();
 $sugeRutas = new sugerenciasModel();
 $sugeLugares = new sugerenciasModel();
-
+$NuevaSugeLugar = new sugerenciasModel();
+$NuevaSugeRuta = new sugerenciasModel();
 ?>

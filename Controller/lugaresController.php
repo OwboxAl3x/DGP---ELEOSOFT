@@ -11,5 +11,6 @@ $lugaresMostrar = new lugaresModel();
 $lugarEliminar = new lugaresModel();
 $lugarSeleccionar = new lugaresModel();
 $lugarParaRuta = new lugaresModel();
+$visitaLugar = new lugaresModel();
 
 ?>
