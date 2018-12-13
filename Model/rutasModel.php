@@ -3,8 +3,8 @@
 class rutasModel {
 
     private $db;
-    private $rutas;
-    private $ruta;  // Campos: IDruta nombre descripcion puntuacion activo
+    public $rutas;
+    public $ruta;  // Campos: IDruta nombre descripcion puntuacion activo
 
     public function __construct(){
 
@@ -38,8 +38,10 @@ class rutasModel {
             return false;
         }
 
+        $i = 0;
         while($filas=$result->fetch_assoc()){
-            $this->rutas[]=$filas;
+            $this->rutas[$i]=$filas;
+            $i = $i + 1;
         }
 
         return $this->rutas;

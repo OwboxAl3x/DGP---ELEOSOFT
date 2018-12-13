@@ -820,6 +820,12 @@ section
 }
 .intro_button
 {
+	margin-top: 57px;
+	z-index: 1;
+}
+
+.intro_button2
+{
 	position: relative;
 	margin-top: 57px;
 	z-index: 1;

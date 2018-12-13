@@ -1,5 +1,6 @@
 <?php
-
+// Obtener las rutas disponibles al momento
+$result = $rutaMostrar->mostrarRutas();  // Array de rutas. Campos: IDruta 	nombre 	descripcion 	puntuacion 	activo
 ?>
 
 <link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
@@ -158,6 +159,42 @@
                     </div>
                 </div>
             </div>
+
+            <?php
+            // Imprimir los lugares presentes
+            $lasRutas = $rutaMostrar->rutas;
+            for ($i = 0; $i <= count($lasRutas); $i++) {
+                // Insertar primera parte
+                echo "<div class=\"col-lg-4 intro_col\">
+                <div class=\"intro_item\">
+                    <div class=\"intro_item_overlay\"></div>
+
+                    <div class=\"intro_item_background\" style=\"background-image:url(../Imagenes/MiradorSanNicolas.jpg)\"></div>
+                    <div class=\"intro_item_content d-flex flex-column align-items-center justify-content-center\">
+                        <div class=\"button intro_button\"><div class=\"button_bcg\"></div><a href=\"../index.php?route\">ver más<span></span><span></span><span></span></a></div>
+                        <div class=\"intro_center text-center\">
+                            <div class=\"ruta2_title\">
+                                <h1>ruta</h1>
+                                <h1>";
+
+                // Insertar nombre
+                echo $lasRutas[$i]["nombre"];
+
+                // Insertar segunda parte
+                echo "</div>
+                            <div class=\"rating rating_5\">
+                                <i class=\"fa fa-star\"></i>
+                                <i class=\"fa fa-star\"></i>
+                                <i class=\"fa fa-star\"></i>
+                                <i class=\"fa fa-star\"></i>
+                                <i class=\"fa fa-star\"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>";
+            }
+            ?>
 
         </div>
     </div>

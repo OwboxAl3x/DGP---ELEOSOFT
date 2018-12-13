@@ -36,7 +36,7 @@
                         <p><a href="../index.php?place">Lugar 5: Es bonito</a></p>
 
 
-                    <div class="button intro_button"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
+                    <div class="button intro_button2"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
                     </p>
                 </div>
             </div>

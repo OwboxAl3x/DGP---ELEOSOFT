@@ -121,7 +121,7 @@
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Alhambra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
                         <div class="intro_date">Recomendada</div>
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="#">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Alhambra</h1>
                             <div class="intro_price">Desde €19</div>
@@ -146,7 +146,7 @@
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Sierra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
                         <div class="intro_date">Recomendada</div>
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="#">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Sierra Nevada</h1>
                             <div class="intro_price">Desde €10</div>
@@ -171,7 +171,7 @@
                     <div class="intro_item_background" style="background-image:url(../Imagenes/MiradorSanNicolas.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
                         <div class="intro_date">Recomendada</div>
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="#">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Mirador San Nicolás</h1>
                             <div class="intro_price">Gratis</div>
@@ -216,7 +216,7 @@
                                 <i></i>
                             </div>
                             <p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-                            <div class="button cta_button"><div class="button_bcg"></div><a href="#">ver más<span></span><span></span><span></span></a></div>
+                            <div class="button cta_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         </div>
 
                         <!-- Ruta Slider Item -->
@@ -230,7 +230,7 @@
                                 <i></i>
                             </div>
                             <p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-                            <div class="button cta_button"><div class="button_bcg"></div><a href="#">ver más<span></span><span></span><span></span></a></div>
+                            <div class="button cta_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         </div>
 
                         <!-- Ruta Slider Item -->
@@ -244,7 +244,7 @@
                                 <i></i>
                             </div>
                             <p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-                            <div class="button cta_button"><div class="button_bcg"></div><a href="#">ver más<span></span><span></span><span></span></a></div>
+                            <div class="button cta_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         </div>
 
                     </div>
@@ -356,7 +356,7 @@
                                             <div class="test_date">11 Ene 2018</div>
                                         </div>
                                         <div class="test_quote_title">" No me arrepiento "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+                                        <p class="test_quote_text">Ahora me siento segura antes de ir a algún sitio, ya sé qué esperar y qué no esperar.</p>
                                     </div>
                                 </div>
                             </div>
