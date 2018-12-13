@@ -14,13 +14,13 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="../index.php?routesMenu"> Rutas </a></li>
                 <li class="nav-item"><a class="nav-link" href="../index.php?placesMenu"> Lugares </a></li>
-                <li class="nav-item dropdown">
+                <!--<li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Mis Viajes  </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../index.php?route"> Ruta 1</a></li>
                         <li><a class="dropdown-item" href="../index.php?route"> Ruta 2 </a></li>
                     </ul>
-                </li>
+                </li>-->
                 <li>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">

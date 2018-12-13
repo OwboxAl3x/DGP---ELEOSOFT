@@ -37,7 +37,7 @@
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Alhambra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Alhambra</h1>
                             <div class="rating rating_4">
@@ -60,7 +60,7 @@
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Sierra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Sierra Nevada</h1>
                             <div class="rating rating_4">
@@ -83,7 +83,7 @@
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/MiradorSanNicolas.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Mirador San Nicolás</h1>
                             <div class="rating rating_5">
@@ -103,7 +103,7 @@
                     <div class="intro_item_overlay"></div>
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Alhambra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Loop Bar & Lounge</h1>
                             <div class="rating rating_4">
@@ -126,7 +126,7 @@
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Sierra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Bar de Tapas Oso</h1>
                             <div class="rating rating_4">
@@ -149,7 +149,7 @@
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/MiradorSanNicolas.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Mirador San Felipe</h1>
                             <div class="rating rating_5">

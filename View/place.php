@@ -35,6 +35,7 @@ $logged = true;
                     <p>El sonido crujiente que se produce al morder un pan bien tostado –dorado, pero no quemado– se enlaza con unos ingredientes que producen en el paladar una fusión de sabores muy original e interesante. El sushi es un invitado regular en sus platos, así como las tartaletas con patés y quesos combinados con espinacas.</p>
                     </p>
                 </div>
+                <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionLugarView">Valorar Lugar<span></span><span></span><span></span></a></div>
             </div>
         </div>
     </div>
