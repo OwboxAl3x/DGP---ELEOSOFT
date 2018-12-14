@@ -46,8 +46,7 @@ if(isset($_POST['aniade'])){
     <div class="form-group">
         <label for="desc" class="control-label">Descripción</label>
 
-        <input type="text" class="form-control" name="desc"
-        placeholder="Descripción Lugar. Ej: Lugar bonito y romantico...">
+        <textarea class="form-control" rows="5" name="desc" placeholder="Descripción Lugar. Ej: Lugar bonito y romantico..."></textarea>
 
     </div>
 

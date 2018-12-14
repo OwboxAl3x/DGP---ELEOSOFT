@@ -9,46 +9,53 @@ if(isset($_POST['Modificar']))
     $descripcion = $_POST['descripcion'];
     $puntuacion=$_POST['puntuacion'];
 
-    echo $id;
-    echo $name;
-    echo $descripcion;
-    echo $puntuacion;
-    
-
     $result = $rutaEditar->editarRuta($id, $name, $descripcion, $puntuacion);
 
-    if($result){
+    if($result)
         echo "bien";
-    }
-    else if(!$result)
-        echo "maaaaal";
     else
-        echo "algo pasa aqui";
+        echo "maaaaal";
+
 }
 if(isset($_POST['accion1'])){
 
-  $id = $_POST['id'];
+    $id = $_POST['id'];
 
-  $result = $rutaSeleccionar->selectRuta($id);
+    $result = $rutaSeleccionar->selectRuta($id);
 
-  ?>
-  <form method="post">
-  <?php
-  for($i=0; $i<count($result); $i++)
-  {
     ?>
-    <input type="hidden" name="id" value="<?php echo $result[$i]["IDruta" ]; ?>">
-    <p><label>Nombre:</p>
-    <input type="text" name="nombre" value="<?php echo $result[$i]["nombre" ]; ?>">
-    <p><label>Descripción:</p>
-      <input type="text" name="descripcion" value="<?php echo $result[$i]["descripcion" ]; ?>" required></label>
-    <p><label>Puntuación:</p>
-      <input type="number" name="puntuacion" value="<?php echo $result[$i]["puntuacion" ]; ?>" required></label>
+    <form method="post">
     <?php
-  }
-  ?>
-    <input type="submit" name="Modificar" value="Modificar">
-  </form>
+    for($i=0; $i<count($result); $i++)
+    {
+    ?>
+        <input type="hidden" name="id" value="<?php echo $result[$i]["IDruta" ]; ?>">
+        <div class="form-group">
+            <label for="nombre" class="control-label">Nombre:</label>
+
+            <input type="text" class="form-control" name="nombre" required value="<?php echo $result[$i]["nombre" ]; ?>">
+
+        </div>
+        <div class="form-group">
+            <label for="descripcion" class="control-label">Descripción:</label>
+
+            <textarea class="form-control" rows="5" name="descripcion" required><?php echo $result[$i]["descripcion" ]; ?></textarea>
+
+        </div>
+        <div class="form-group">
+            <label for="puntuacion" class="control-label">Puntuacion:</label>
+
+            <input type="number" class="form-control" name="puntuacion" value="<?php echo $result[$i]["puntuacion" ]; ?>" required></label>
+        </div>
+
+    <?php
+    }
+    ?>
+        <div class="form-group">
+            <button type="submit" name="Modificar" class="btn btn-primary">Modificar</button>
+        </div>
+    </form>
+
 <?php }
 if(isset($_POST['accion2'])){
 

@@ -55,8 +55,7 @@ if (!isset($_POST['siguiente'])){
     <div class="form-group">
         <label for="desc" class="control-label">Descripción</label>
 
-        <input type="text" class="form-control" name="desc"
-        placeholder="En esta ruta podremos encontrar todo tipo de gastronimía...">
+        <textarea class="form-control" rows="5" name="desc" placeholder="En esta ruta podremos encontrar todo tipo de gastronimía..."></textarea>
 
     </div>
 
@@ -64,7 +63,7 @@ if (!isset($_POST['siguiente'])){
 
     <div class="form-group">
 
-        <select required name="lugares[]" multiple>
+        <select required name="lugares[]" multiple class="chosen" style="width: 100%">
             <?php for($i=0; $i<count($result2); $i++)
             {
                 echo '<option>'.$result2[$i]['nombre'].'</option>';
@@ -122,3 +121,7 @@ if (!isset($_POST['siguiente'])){
     </div>
 
 </form>
+
+<script type="text/javascript">
+    $(".chosen").chosen();
+</script>
