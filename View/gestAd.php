@@ -1,6 +1,8 @@
-
-
-<h4>Añadir Administrador</h4>
+<br clear="all">
+<br clear="all">
+<h4>Añadir Administrador:</h4>
+<br clear="all">
+<br clear="all">
 
 <form method="post">
 

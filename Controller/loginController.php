@@ -22,8 +22,6 @@ if(isset($_GET['register'])){
 
 } else if (isset($_GET['admin'])) {
 
-    include("./View/panelAdmin.php");
-
     if (isset($_GET['aniadeL'])){
         include("./View/aniadeLugar.php");
     } else if (isset($_GET['aniadeR'])){
@@ -38,8 +36,9 @@ if(isset($_GET['register'])){
         include("./View/gestUs.php");
     }else if (isset($_GET['gestAd'])){
         include("./View/gestAd.php");
+    }else {
+        include("./View/panelAdmin.php");
     }
-
 
 } else if (isset($_GET['login'])) {
 

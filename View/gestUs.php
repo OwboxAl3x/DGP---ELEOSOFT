@@ -1,5 +1,8 @@
-
-<h4>Gestion de Usuarios</h4>
+<br clear="all">
+<br clear="all">
+<h4>Gestion de Usuarios:</h4>
+<br clear="all">
+<br clear="all">
 
 <table class="table">
   <thead class="thead-dark">

@@ -24,6 +24,11 @@ if(isset($_POST['aniade'])){
 }
 ?>
 
+<br clear="all">
+<br clear="all">
+<h4>Añadir lugar:</h4>
+<br clear="all">
+<br clear="all">
 
 <form method="post">
 

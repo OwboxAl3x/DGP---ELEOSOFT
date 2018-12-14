@@ -17,6 +17,17 @@ if(isset($_POST['Modificar']))
         echo "maaaaal";
 
 }
+
+?>
+
+<br clear="all">
+<br clear="all">
+<h4>Modificar ruta:</h4>
+<br clear="all">
+<br clear="all">
+
+<?php
+
 if(isset($_POST['accion1'])){
 
     $id = $_POST['id'];
@@ -24,6 +35,9 @@ if(isset($_POST['accion1'])){
     $result = $rutaSeleccionar->selectRuta($id);
 
     ?>
+
+
+
     <form method="post">
     <?php
     for($i=0; $i<count($result); $i++)
@@ -53,6 +67,7 @@ if(isset($_POST['accion1'])){
     ?>
         <div class="form-group">
             <button type="submit" name="Modificar" class="btn btn-primary">Modificar</button>
+            <button type="submit" name="Cancelar" class="btn btn-primary">Cancelar</button>
         </div>
     </form>
 
@@ -97,8 +112,6 @@ if(isset($_POST['accion3'])){
         echo "La inserción no ha sido posible";
   }
 ?>
-
-
 
 <table class="table">
   <thead class="thead-dark">

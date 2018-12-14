@@ -20,6 +20,17 @@ if(isset($_POST['Modificar']))
     else
         echo "algo pasa aqui";
 }
+
+?>
+
+<br clear="all">
+<br clear="all">
+<h4>Modificar lugar:</h4>
+<br clear="all">
+<br clear="all">
+
+<?php
+
 if(isset($_POST['accion1'])){
 
     $id = $_POST['id'];
@@ -27,6 +38,7 @@ if(isset($_POST['accion1'])){
     $result = $lugarSeleccionar->selectLugar($id);
 
     ?>
+
     <form method="post">
     <?php
     for($i=0; $i<count($result); $i++)
@@ -61,6 +73,7 @@ if(isset($_POST['accion1'])){
     ?>
         <div class="form-group">
             <button type="submit" name="Modificar" class="btn btn-primary">Modificar</button>
+            <button type="submit" name="Cancelar" class="btn btn-primary">Cancelar</button>
         </div>
     </form>
 

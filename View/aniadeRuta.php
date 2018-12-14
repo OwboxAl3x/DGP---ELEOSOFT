@@ -33,7 +33,11 @@ if(isset($_POST['aniade'])){
 }
 ?>
 
-<h4>Añadir ruta: <br> <br> </h4>
+<br clear="all">
+<br clear="all">
+<h4>Añadir ruta:</h4>
+<br clear="all">
+<br clear="all">
 
 <?php
 
