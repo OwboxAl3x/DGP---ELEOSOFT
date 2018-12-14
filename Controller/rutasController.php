@@ -14,6 +14,9 @@ $rutaSeleccionar = new rutasModel();
 $rutaBuscada = new rutasModel();
 $rutaBuscadaPorNombre = new rutasModel();
 $rutasConLugares = new rutasModel();
+$lugaresRuta = new rutasModel();
+$lugarEnRuta = new rutasModel();
+$borrarLugaresRuta = new rutasModel();
 $realizaRuta = new rutasModel();
 
 ?>

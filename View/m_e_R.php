@@ -11,7 +11,21 @@ if(isset($_POST['Modificar']))
 
     $result = $rutaEditar->editarRuta($id, $name, $descripcion, $puntuacion);
 
-    if($result)
+    $numeroLugares = $_POST['cuantosLugares'];
+    $idRuta = $rutaBuscadaPorNombre->buscarRuta($name);
+
+    $result6 = $borrarLugaresRuta->borrarTodosAparece($idRuta[0]["IDruta"]);
+
+    if ($result6){
+        for ($i=0;$i<$numeroLugares;$i++){
+            $lugarParaRuta = new lugaresModel();
+            $idLugar = $lugarParaRuta->selectLugarPorNombre($_POST['lugar'.$i]);
+            $result2 = $rutasConLugares->aniadirLugaresRuta($idRuta[0]['IDruta'], $idLugar[0]['IDlugar'], $_POST['pos'.$i]);
+            if (!$result2) break;
+        }
+    }
+
+    if($result && $result2 && $result6)
         echo "bien";
     else
         echo "maaaaal";
@@ -28,11 +42,50 @@ if(isset($_POST['Modificar']))
 
 <?php
 
+if (isset($_POST['siguiente'])) {
+
+$lugares = $_POST['lugares'];
+$id = $_POST['id'];
+$name = $_POST['nombre'];
+$descripcion = $_POST['descripcion'];
+$puntuacion=$_POST['puntuacion'];
+
+?>
+
+<form method="post">
+
+    <?php for($i=0; $i<count($lugares); $i++)
+    {
+        echo '<div class="form-group"><label for="lugarN" class="control-label">'.$lugares[$i].'</label>
+            <input type="text" class="form-control" name="pos'.$i.'" placeholder="Posición en la ruta"></div>
+            <input type="text" hidden class="form-control" name="lugar'.$i.'" value="'.$lugares[$i].'" ></div>';
+    }
+
+    echo '<div class="form-group">
+
+            <input hidden type="text" class="form-control" name="id" value="'.$id.'" >
+            <input hidden type="text" class="form-control" name="nombre" value="'.$name.'" >
+            <input hidden type="text" class="form-control" name="descripcion" value="'.$descripcion.'" >
+            <input hidden type="text" class="form-control" name="puntuacion" value="'.$puntuacion.'" >
+            <input hidden type="text" class="form-control" name="cuantosLugares" value="'.count($lugares).'" >
+            
+        </div>';
+
+    echo '<div class="form-group">
+            <button type="submit" name="Modificar" class="btn btn-primary">Modificar</button>
+            <button type="submit" name="Cancelar" class="btn btn-primary">Cancelar</button>
+        </div>
+    </form>';
+
+}
+
 if(isset($_POST['accion1'])){
 
     $id = $_POST['id'];
 
     $result = $rutaSeleccionar->selectRuta($id);
+    $result2 = $lugaresMostrar->mostrarLugares();
+    $result3 = $lugaresRuta->selectLugaresRuta($id);
 
     ?>
 
@@ -57,6 +110,26 @@ if(isset($_POST['accion1'])){
 
         </div>
         <div class="form-group">
+            <label for="lugares" class="control-label">Lugares:</label>
+
+            <select required name="lugares[]" multiple class="chosen" style="width: 100%">
+                <?php
+                    $result4 = array_intersect_assoc($result2, $result3);
+                    $j=0;
+                    foreach ($result4 as $item) {
+                        echo '<option selected>' . $item['nombre'] . '</option>';
+                        $j++;
+                    }
+                    $result5 = array_diff_assoc($result2, $result3);
+                    $k=0;
+                    foreach ($result5 as $item2) {
+                        echo '<option>' . $item2['nombre'] . '</option>';
+                        $k++;
+                    }
+                ?>
+            </select>
+        </div>
+        <div class="form-group">
             <label for="puntuacion" class="control-label">Puntuacion:</label>
 
             <input type="number" class="form-control" name="puntuacion" value="<?php echo $result[$i]["puntuacion" ]; ?>" required></label>
@@ -66,12 +139,13 @@ if(isset($_POST['accion1'])){
     }
     ?>
         <div class="form-group">
-            <button type="submit" name="Modificar" class="btn btn-primary">Modificar</button>
+            <button type="submit" name="siguiente" class="btn btn-primary">Siguiente</button>
             <button type="submit" name="Cancelar" class="btn btn-primary">Cancelar</button>
         </div>
     </form>
 
 <?php }
+
 if(isset($_POST['accion2'])){
 
 
@@ -162,3 +236,7 @@ if(isset($_POST['accion3'])){
 
   </tbody>
 </table>
+
+<script type="text/javascript">
+    $(".chosen").chosen();
+</script>

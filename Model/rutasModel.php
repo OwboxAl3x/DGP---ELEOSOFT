@@ -4,11 +4,13 @@ class rutasModel {
 
     private $db;
     public $rutas;
+    public $rutasAparecen;
 
     public function __construct(){
 
         $this->db = Conectar::conexion();
         $this->rutas = array();
+        $this->rutasAparecen = array();
 
     }
 
@@ -152,6 +154,64 @@ class rutasModel {
         }
 
         return true;
+    }
+
+    public function selectLugaresRuta($idRuta)
+    {
+
+        $result = $this->db->query("SELECT IDlugar FROM aparece WHERE idruta = '".$idRuta."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        while($filas=$result->fetch_assoc()){
+            $this->rutasAparecen[]=$filas;
+        }
+
+        return $this->rutasAparecen;
+
+    }
+
+    public function apareceLugarEnRuta($idRuta, $idLugar)
+    {
+
+        $result = $this->db->query("SELECT IDlugar FROM aparece WHERE idruta = '".$idRuta."' and idlugar = '".$idLugar."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        if($result->num_rows<1){
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public function borrarAparece($idRuta, $idLugar){
+
+        $result = $this->db->query("DELETE FROM Aparece WHERE idLugar='".$idLugar."' and idRuta='".$idRuta."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public function borrarTodosAparece($idRuta){
+
+        $result = $this->db->query("DELETE FROM Aparece WHERE idRuta='".$idRuta."';");
+
+        if (!$result) {
+            return false;
+        }
+
+        return true;
+
     }
 
 }

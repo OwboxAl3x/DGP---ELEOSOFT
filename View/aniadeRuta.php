@@ -63,9 +63,8 @@ if (!isset($_POST['siguiente'])){
 
     </div>
 
-    <div>Lugares</div>
-
     <div class="form-group">
+        <label for="lugares" class="control-label">Lugares</label>
 
         <select required name="lugares[]" multiple class="chosen" style="width: 100%">
             <?php for($i=0; $i<count($result2); $i++)
