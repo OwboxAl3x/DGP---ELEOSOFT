@@ -13,8 +13,9 @@ if(isset($_POST['aniade'])){
     
     $result = $lugarRegistrar->registrarLugar($name, $ubicacion, $descripcion, $puntuacion);
 
-    if($result){
+    if($result) {
         echo "bien";
+        $actuTomaLugar->actualizarFecha(2);
     }
     else if(!$result)
         echo "maaaaal";

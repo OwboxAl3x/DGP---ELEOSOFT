@@ -85,8 +85,10 @@
   
     $result = $adminDesactivar->desactivarAdmin($id);
   
-    if($result)
+    if($result) {
         echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(1);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -96,9 +98,11 @@
     $id = $_POST['id'];
   
     $result = $adminActivar->activarAdmin($id);
-  
-    if($result)
-        echo "Inserción realizada";
+
+    if($result) {
+      echo "Inserción realizada";
+      $actuTomaUsu->actualizarFecha(1);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -110,14 +114,16 @@
     $id = $_POST['id'];
   
     $result = $adminBorrar->borrarAdmin($id);
-  
-    if($result)
-        echo "Inserción realizada";
+
+    if($result) {
+      echo "Inserción realizada";
+      $actuTomaUsu->actualizarFecha(1);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
   
-    $result = $usuarioMostrar->mostrarUser();
+    $result = $usuarioMostrar->mostrarAdmin();
   
     for($i=0; $i<count($result); $i++){
       echo '<tr>';

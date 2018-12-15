@@ -27,9 +27,11 @@
     $id = $_POST['id'];
   
     $result = $sugeAceptarLugares->activarLugar($id);
-  
-    if($result)
-        echo "Inserción realizada";
+
+      if($result) {
+          echo "Inserción realizada";
+          $actuTomaUsu->actualizarFecha(4);
+      }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -39,9 +41,11 @@
     $id = $_POST['id'];
   
     $result = $sugeDenegarLugares->denegarLugar($id);
-  
-    if($result)
-        echo "Inserción realizada";
+
+      if($result) {
+          echo "Inserción realizada";
+          $actuTomaUsu->actualizarFecha(4);
+      }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -50,9 +54,11 @@
     $id = $_POST['id'];
   
     $result = $sugeDenegarLugares->sugeLugarBorra($id);
-  
-    if($result)
-        echo "Inserción realizada";
+
+      if($result) {
+          echo "Inserción realizada";
+          $actuTomaUsu->actualizarFecha(4);
+      }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -139,8 +145,10 @@ if(isset($_POST['aceptar'])){
 
   $result = $sugeAceptarRutas->activarRuta($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(4);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }
@@ -151,8 +159,10 @@ if(isset($_POST['denegar'])){
 
   $result = $sugeDenegarRutas->denegarRuta($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(4);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }
@@ -163,8 +173,10 @@ if(isset($_POST['borrar'])){
 
   $result = $sugeDenegarRutas->sugeRutaBorra($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(4);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }

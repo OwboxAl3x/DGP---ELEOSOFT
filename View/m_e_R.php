@@ -25,8 +25,11 @@ if(isset($_POST['Modificar']))
         }
     }
 
-    if($result && $result2 && $result6)
+    if($result && $result2 && $result6) {
         echo "bien";
+        $ultModRuta = date("F j, Y, g:i a");
+        $actuTomaUsu->actualizarFecha(3);
+    }
     else
         echo "maaaaal";
 
@@ -154,8 +157,10 @@ if(isset($_POST['accion2'])){
 
   $result = $rutaEliminar->eliminaRuta($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(3);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }
@@ -167,8 +172,10 @@ if(isset($_POST['accion3'])){
 
     $result = $rutaActivar->activarRuta($id);
 
-    if($result)
+    if($result) {
         echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(3);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -180,8 +187,10 @@ if(isset($_POST['accion3'])){
 
     $result = $rutaDesactivar->desactivarRuta($id);
 
-    if($result)
-        echo "Inserción realizada";
+      if($result) {
+          echo "Inserción realizada";
+          $actuTomaUsu->actualizarFecha(3);
+      }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }

@@ -28,8 +28,10 @@
   
     $result = $usuarioDesactivar->desactivarUser($id);
   
-    if($result)
+    if($result) {
         echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(1);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -40,8 +42,10 @@
   
     $result = $usuarioActivar->activarUser($id);
   
-    if($result)
+    if($result) {
         echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(1);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }
@@ -54,8 +58,10 @@
   
     $result = $usuarioBorrar->borrarUser($id);
   
-    if($result)
+    if($result) {
         echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(1);
+    }
     else if(!$result)
         echo "La inserción no ha sido posible";
   }

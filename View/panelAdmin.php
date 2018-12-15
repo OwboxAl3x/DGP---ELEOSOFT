@@ -1,3 +1,12 @@
+<?php
+
+$fechaUsu = $actuDameUsu->selectActu(1);
+$fechaLugar = $actuDameLugar->selectActu(2);
+$fechaRuta = $actuDameRuta->selectActu(3);
+$fechaSuge = $actuDameSegui->selectActu(4);
+
+?>
+
 <br class="all" />
 <br class="all" />
 <div class="card-deck">
@@ -12,7 +21,7 @@
             <li class="list-group-item"><a href="index.php?admin&gestAd">Añadir/Eliminar Administradores</a></li>
         </ul>
         <div class="card-body">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Last updated <?php echo $fechaUsu[0]['fecha']; ?></small>
         </div>
     </div>
     <div class="card" style="width: 18rem;">
@@ -26,7 +35,7 @@
             <li class="list-group-item"><a href="index.php?admin&m_e_L">Modificar/Eliminar Lugar</a></li>
         </ul>
         <div class="card-body">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Last updated <?php echo $fechaLugar[0]['fecha']; ?></small>
         </div>
     </div>
     <div class="card" style="width: 18rem;">
@@ -40,7 +49,7 @@
             <li class="list-group-item"><a href="index.php?admin&m_e_R">Modificar/Eliminar Ruta</a></li>
         </ul>
         <div class="card-body">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Last updated <?php echo $fechaRuta[0]['fecha']; ?></small>
         </div>
     </div>
     <div class="card" style="width: 18rem;">
@@ -53,7 +62,7 @@
             <li class="list-group-item"><a href="index.php?admin&ver_sugerencias">Ver Sugerencias</a></li>
         </ul>
         <div class="card-body">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Last updated <?php echo $fechaSuge[0]['fecha']; ?></small>
         </div>
     </div>
 </div>

@@ -14,11 +14,10 @@ if(isset($_POST['Modificar']))
 
     if($result){
         echo "bien";
+        $actuTomaUsu->actualizarFecha(2);
     }
-    else if(!$result)
-        echo "maaaaal";
     else
-        echo "algo pasa aqui";
+        echo "maaaaal";
 }
 
 ?>
@@ -85,8 +84,10 @@ if(isset($_POST['accion2'])){
   
   $result = $lugarEliminar->eliminaLugar($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(2);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }
@@ -97,8 +98,10 @@ if(isset($_POST['accion3'])){
   
   $result = $lugarActivar->activarLugar($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(2);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }
@@ -109,8 +112,10 @@ if(isset($_POST['accion4'])){
   
   $result = $lugarDesactivar->descactivarLugar($id);
 
-  if($result)
-      echo "Inserción realizada";
+    if($result) {
+        echo "Inserción realizada";
+        $actuTomaUsu->actualizarFecha(2);
+    }
   else if(!$result)
       echo "La inserción no ha sido posible";
 }

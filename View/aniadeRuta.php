@@ -19,14 +19,16 @@ if(isset($_POST['aniade'])){
         $lugarParaRuta = new lugaresModel();
         $idLugar = $lugarParaRuta->selectLugarPorNombre($_POST['lugar'.$i]);
         echo $idRuta[0]["IDruta"].' - '.$idLugar[0]["IDlugar"].' - '.$_POST["pos".$i];
-        $result = $rutasConLugares->aniadirLugaresRuta($idRuta[0]['IDruta'], $idLugar[0]['IDlugar'], $_POST['pos'.$i]);
+        $result3 = $rutasConLugares->aniadirLugaresRuta($idRuta[0]['IDruta'], $idLugar[0]['IDlugar'], $_POST['pos'.$i]);
 
-        if (!$result) break;
+        if (!$result3) break;
 
     }
 
-    if($result)
+    if($result && $result3) {
         echo "Inserción bien realizada";
+        $actuTomaUsu->actualizarFecha(3);
+    }
     else
         echo "Inserción mal realizada";
 
