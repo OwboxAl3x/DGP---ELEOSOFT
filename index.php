@@ -30,6 +30,8 @@ include("Controller/lugaresController.php");
 include("Controller/rutasController.php");
 include("Controller/sugerenciasController.php");
 include("Controller/actusController.php");
+include("Controller/valoracionController.php");
+
 
 //Si no se ha logueado ningun usuario
 if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']))) {
@@ -42,9 +44,49 @@ if (isset($_GET['login']) or (isset($_GET['register'])) or (isset($_GET['admin']
 
     include("View/route.php");
 
-}  else if (isset($_GET['place'])) {
+} else if (isset($_GET['route1'])) {
+
+    include("View/route1.php");
+
+} else if (isset($_GET['route2'])) {
+
+    include("View/route2.php");
+
+} else if (isset($_GET['place'])) {
 
     include("View/place.php");
+
+} else if (isset($_GET['place1'])) {
+
+    include("View/place1.php");
+
+} else if (isset($_GET['place2'])) {
+
+    include("View/place2.php");
+
+} else if (isset($_GET['place3'])) {
+
+    include("View/place3.php");
+
+} else if (isset($_GET['place4'])) {
+
+    include("View/place4.php");
+
+} else if (isset($_GET['place5'])) {
+
+    include("View/place5.php");
+
+} else if (isset($_GET['place6'])) {
+
+    include("View/place6.php");
+
+} else if (isset($_GET['place7'])) {
+
+    include("View/place7.php");
+
+} else if (isset($_GET['place8'])) {
+
+    include("View/place8.php");
 
 } else if (isset($_GET['placesMenu'])) {
 
