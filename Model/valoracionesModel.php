@@ -12,9 +12,13 @@ class valoracionesModel {
 
     }
 
-        public function rutaRealizadaValoracion ($idruta, $idusuario, $puntuacion, $comentario){
 
-        $result = $this->db->query("UPDATE realiza SET puntuacion ='".$puntuacion."', comentario='".$comentario."' WHERE idruta='".$idruta."' and idusuario='".$idusuario."';");
+         public function rutaRealizadaValoracion ($idruta, $idusuario, $puntuacion, $descripcion){
+
+        $result = $this->db->query("UPDATE realiza SET puntuacion ='".$puntuacion."', comentario='".$descripcion."' 
+            WHERE IDruta='".$idruta."' and IDusuario='".$idusuario."';");
+
+        $result = $this->db->query ("UPDATE ruta SET puntuacion = (SELECT AVG(puntuacion) from realiza WHERE IDruta='".$idruta."')");
         
         if(!$result){
             return false;
@@ -25,23 +29,13 @@ class valoracionesModel {
         }
 
 
-        public function puntuacionTotalRuta ($idruta){
-
-        	$result = $this->db->query ("UPDATE ruta SET idruta, puntuacion SELECT idruta, AVG(puntuacion) from realiza WHERE idruta='".$idruta."' group by idruta;");
-
-        	if (!$result) {
-            return false;
-        }
         
-        return true;
-    
-        }
-        
+        public function lugarVisitadoValoracion ($idlugar, $idusuario, $puntuacion, $descripcion){
 
-        public function lugarVisitadoValoracion ($idlugar, $idusuario, $puntuacion, $comentario){
+        $result = $this->db->query("UPDATE visita SET puntuacion ='".$puntuacion."', comentario='".$descripcion."' 
+        	WHERE IDlugar='".$idlugar."' and IDusuario='".$idusuario."';");
 
-        $result = $this->db->query("UPDATE visita SET puntuacion ='".$puntuacion."', comentario='".$comentario."' 
-        	WHERE idlugar='".$idlugar."' and idusuario='".$idusuario."';");
+        $result = $this->db->query ("UPDATE lugar SET puntuacion = (SELECT AVG(puntuacion) from visita WHERE IDlugar='".$idlugar."')");
         
         if(!$result){
             return false;
@@ -52,14 +46,6 @@ class valoracionesModel {
         }
 
 
-        public function puntuacionTotalLugar ($idlugar){
+}
 
-        	$result = $this->db->query ("UPDATE lugar SET idlugar, puntuacion SELECT idlugar, AVG(puntuacion) from visita WHERE idlugar='".$idlugar."' group by idlugar;");
-
-        	if (!$result) {
-            return false;
-        }
-        
-        return true;
-    
-        }
+?>
