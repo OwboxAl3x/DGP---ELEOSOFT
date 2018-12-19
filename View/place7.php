@@ -22,7 +22,7 @@ $logged = true;
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/oa.jpg" width="400" alt=""></div>
+                <div class="intro_image"><img src="../Imagenes/oa.jpg" width="400" alt="Foto de oasis"></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
