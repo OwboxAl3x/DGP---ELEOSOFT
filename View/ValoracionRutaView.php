@@ -12,7 +12,6 @@ if(isset($_POST['val'])){
 
     if($result) {
         echo "bien";
-        $actuTomaLugar->actualizarFecha(2);
     }
     else if(!$result)
         echo "mal";
