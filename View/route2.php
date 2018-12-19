@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/tapa2.jpg" width="400" alt="Foto de Alhambra Vintage"></div>
+                <div class="intro_image"><img src="../Imagenes/tapa2.jpg" width="400" alt="Foto de tapas"></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
