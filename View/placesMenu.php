@@ -37,7 +37,7 @@
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Alhambra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place3">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <h1>Alhambra</h1>
                             <div class="rating rating_4">
@@ -52,17 +52,63 @@
                 </div>
             </div>
 
-            <!-- Intro Item -->
+            <!-- Ruta Item -->
 
             <div class="col-lg-4 intro_col">
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
 
-                    <div class="intro_item_background" style="background-image:url(../Imagenes/Sierra2.jpg)"></div>
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/nazari.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place2">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
-                            <h1>Sierra Nevada</h1>
+                            <h1>Palacio Nazaríes</h1>
+                            <div class="rating rating_4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ruta Item -->
+
+            <div class="col-lg-4 intro_col">
+                <div class="intro_item">
+                    <div class="intro_item_overlay"></div>
+
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/alcazaba1.jpg)"></div>
+                    <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place1">ver más<span></span><span></span><span></span></a></div>
+                        <div class="intro_center text-center">
+                            <h1>Alcazaba</h1>
+                            <div class="rating rating_4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ruta Item -->
+
+            <div class="col-lg-4 intro_col">
+                <div class="intro_item">
+                    <div class="intro_item_overlay"></div>
+
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/llano1.jpg)"></div>
+                    <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place4">ver más<span></span><span></span><span></span></a></div>
+                        <div class="intro_center text-center">
+                            <h1>Prado Llano</h1>
                             <div class="rating rating_4">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -81,11 +127,34 @@
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
 
-                    <div class="intro_item_background" style="background-image:url(../Imagenes/MiradorSanNicolas.jpg)"></div>
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/virgen1.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place5">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
-                            <h1>Mirador San Nicolás</h1>
+                            <h1>Virgen de las nieves</h1>
+                            <div class="rating rating_4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro Item -->
+
+            <div class="col-lg-4 intro_col">
+                <div class="intro_item">
+                    <div class="intro_item_overlay"></div>
+
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/veleta.jpg)"></div>
+                    <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place6">ver más<span></span><span></span><span></span></a></div>
+                        <div class="intro_center text-center">
+                            <h1>Veleta</h1>
                             <div class="rating rating_5">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -101,7 +170,7 @@
             <div class="col-lg-4 intro_col">
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
-                    <div class="intro_item_background" style="background-image:url(../Imagenes/Alhambra2.jpg)"></div>
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/loopbar2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
                         <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
@@ -124,11 +193,11 @@
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
 
-                    <div class="intro_item_background" style="background-image:url(../Imagenes/Sierra2.jpg)"></div>
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/oasis.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place7">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
-                            <h1>Bar de Tapas Oso</h1>
+                            <h1>Cerveceria Oasis</h1>
                             <div class="rating rating_4">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -147,11 +216,11 @@
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
 
-                    <div class="intro_item_background" style="background-image:url(../Imagenes/MiradorSanNicolas.jpg)"></div>
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/bo.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?place8">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
-                            <h1>Mirador San Felipe</h1>
+                            <h1>Bodegas Castañeda</h1>
                             <div class="rating rating_5">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>

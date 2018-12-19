@@ -1,16 +1,16 @@
 <?php
-    // TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion de la ruta y colocarla en variables
-    $logged = true;
+// TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion del lugar
+$logged = true;
 ?>
 
 <link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
 <link rel="stylesheet" type="text/css" href="../CSS/about_responsive.css">
 
 <div class="home">
-    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Alhambra1Vintage.jpg"></div>
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/al.jpg"></div>
     <div class="home_content">
         <div class="ruta_title">
-            <h1>ruta</h1>
+            <h1>lugar</h1>
             <h1>Alhambra</h1>
         </div>
     </div>
@@ -22,22 +22,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/Alhambra3Vintage.jpg" width="400" alt="Foto de Alhambra Vintage"></div>
+                <div class="intro_image"><img src="../Imagenes/Alhambra.jpg" width="400" alt=""></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
-                    <div class="intro_title">Lo que incluye esta ruta...</div>
+                    <div class="intro_title">Descripción</div>
                     <p class="intro_text">
-                        Esta ruta pasa por los siguientes lugares:
-                        <p><a href="../index.php?place1">ALCAZABA</a></p>
-                        <p><a href="../index.php?place2">PALACIO NAZARI</a></p>
-                        <p><a href="../index.php?place3">ALHAMBRA</a></p>
+                    <p>La Alhambra es una ciudad palatina andalusí situada en Granada, en comunidad autónoma de Andalucía, España. Consiste en un conjunto de palacios, jardines y fortaleza (alcázar o al-qasr القصر) que albergaba una verdadera ciudadela dentro de la propia ciudad de Granada, que servía como alojamiento al monarca y a la corte del Reino nazarí de Granada. </p>
 
-
-                    <div class="button intro_button2"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
-                    <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionRutaView">Valorar Ruta<span></span><span></span><span></span></a></div>
-                    </p>
+                    <p>Su verdadero atractivo, como en otras obras musulmanas de la época, no solo radica en los interiores, cuya decoración está entre las cumbres del arte andalusí, sino también en su localización y adaptación, generando un paisaje nuevo pero totalmente integrado con la naturaleza preexistente. En 2016 fue el segundo monumento más visitado de España, por detrás del Templo Expiatorio de la Sagrada Familia de Barcelona,2​ recibiendo la cifra histórica de 2 615 188 visitantes.</p>
                 </div>
+                <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionLugarView">Valorar Lugar<span></span><span></span><span></span></a></div>
             </div>
         </div>
     </div>
@@ -53,8 +48,8 @@
 </div>
 
 <?php
- if ($logged) {
-     echo('<div class="contact_form_section">
+if ($logged) {
+    echo('<div class="contact_form_section">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -75,6 +70,5 @@
         </div>
     </div>
 </div>');
- }
+}
 ?>
-

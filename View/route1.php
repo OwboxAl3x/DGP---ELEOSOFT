@@ -7,11 +7,11 @@
 <link rel="stylesheet" type="text/css" href="../CSS/about_responsive.css">
 
 <div class="home">
-    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Alhambra1Vintage.jpg"></div>
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Sierra.jpg"></div>
     <div class="home_content">
         <div class="ruta_title">
             <h1>ruta</h1>
-            <h1>Alhambra</h1>
+            <h1>Sierra Nevada</h1>
         </div>
     </div>
 </div>
@@ -22,16 +22,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/Alhambra3Vintage.jpg" width="400" alt="Foto de Alhambra Vintage"></div>
+                <div class="intro_image"><img src="../Imagenes/Sierra2.jpg" width="400" alt="Foto de sierra"></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
                     <div class="intro_title">Lo que incluye esta ruta...</div>
                     <p class="intro_text">
                         Esta ruta pasa por los siguientes lugares:
-                        <p><a href="../index.php?place1">ALCAZABA</a></p>
-                        <p><a href="../index.php?place2">PALACIO NAZARI</a></p>
-                        <p><a href="../index.php?place3">ALHAMBRA</a></p>
+                        <p><a href="../index.php?place4">PRADO LLANO</a></p>
+                        <p><a href="../index.php?place5">VIRGEN DE LAS NIEVES</a></p>
+                        <p><a href="../index.php?place6">VELETA</a></p>
 
 
                     <div class="button intro_button2"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>

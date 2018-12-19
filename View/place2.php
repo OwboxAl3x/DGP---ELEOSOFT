@@ -1,17 +1,17 @@
 <?php
-    // TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion de la ruta y colocarla en variables
-    $logged = true;
+// TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion del lugar
+$logged = true;
 ?>
 
 <link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
 <link rel="stylesheet" type="text/css" href="../CSS/about_responsive.css">
 
 <div class="home">
-    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Alhambra1Vintage.jpg"></div>
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/nazari.jpg"></div>
     <div class="home_content">
         <div class="ruta_title">
-            <h1>ruta</h1>
-            <h1>Alhambra</h1>
+            <h1>lugar</h1>
+            <h1>Palacio Nazari</h1>
         </div>
     </div>
 </div>
@@ -22,22 +22,20 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/Alhambra3Vintage.jpg" width="400" alt="Foto de Alhambra Vintage"></div>
+                <div class="intro_image"><img src="../Imagenes/pana1.jpg" width="400" alt=""></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
-                    <div class="intro_title">Lo que incluye esta ruta...</div>
+                    <div class="intro_title">Descripción</div>
                     <p class="intro_text">
-                        Esta ruta pasa por los siguientes lugares:
-                        <p><a href="../index.php?place1">ALCAZABA</a></p>
-                        <p><a href="../index.php?place2">PALACIO NAZARI</a></p>
-                        <p><a href="../index.php?place3">ALHAMBRA</a></p>
+                    <p>Conjunto palacial, residencia de los reyes de Granada. Lo empieza a construir el fundador de la dinastía, Alhamar, en el s XIII, aunque las edificaciones que han pervivido hasta nuestros días datan, principalmente, del s XIV. Estos palacios encierran entre sus muros el refinamiento y la delicadeza de los últimos gobernadores hispano-árabes de Al Andalus, los Nazaríes.</p>
 
+                    <p>Tres palacios forman este recinto: El Mexuar, El Palacio de Comares, o de Yusuf I y el Palacio de los Leones, o de Mohammed V.</p>
 
-                    <div class="button intro_button2"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
-                    <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionRutaView">Valorar Ruta<span></span><span></span><span></span></a></div>
+                    <p>El concepto intimista del palacio real, cerrado a los ojos del curioso, armoniza la robustez de los paños exteriores con la fragilidad del interior, donde los elementos arquitectónicos se tornan puramente ornamentales. Los materiales pobres con que se decoran los palacios ponen en evidencia la temporalidad de la construcción con respecto al cosmos, prueba de la transitoriedad del hombre.Los patios, continuas alusiones al jardín, con elementos de inspiración persa y musulmana, son el anticipo del paraíso, oasis del nómada, goce de los sentidos. El agua, elemento que da forma al palacio, aunando el jardín con la arquitectura, representa la pureza; agua cristalina que corre entre los mármoles de las fuentes; agua de vida que da riqueza y frescor al jardín, belleza estética, generosidad del sultán... todo un mundo de símbolos y estímulos.</p>
                     </p>
                 </div>
+                <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionLugarView">Valorar Lugar<span></span><span></span><span></span></a></div>
             </div>
         </div>
     </div>
@@ -53,8 +51,8 @@
 </div>
 
 <?php
- if ($logged) {
-     echo('<div class="contact_form_section">
+if ($logged) {
+    echo('<div class="contact_form_section">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -75,6 +73,5 @@
         </div>
     </div>
 </div>');
- }
+}
 ?>
-

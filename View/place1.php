@@ -1,17 +1,17 @@
 <?php
-    // TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion de la ruta y colocarla en variables
-    $logged = true;
+// TODO: Aqui se realizara la consulta a la base de datos para obtener la informacion del lugar
+$logged = true;
 ?>
 
 <link rel="stylesheet" type="text/css" href="../CSS/about_styles.css">
 <link rel="stylesheet" type="text/css" href="../CSS/about_responsive.css">
 
 <div class="home">
-    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/Alhambra1Vintage.jpg"></div>
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Imagenes/alcazaba.jpg"></div>
     <div class="home_content">
         <div class="ruta_title">
-            <h1>ruta</h1>
-            <h1>Alhambra</h1>
+            <h1>lugar</h1>
+            <h1>Alcazaba</h1>
         </div>
     </div>
 </div>
@@ -22,22 +22,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="intro_image"><img src="../Imagenes/Alhambra3Vintage.jpg" width="400" alt="Foto de Alhambra Vintage"></div>
+                <div class="intro_image"><img src="../Imagenes/alcazaba1.jpg" width="400" alt=""></div>
             </div>
             <div class="col-lg-5">
                 <div class="intro_content">
-                    <div class="intro_title">Lo que incluye esta ruta...</div>
+                    <div class="intro_title">Descripción</div>
                     <p class="intro_text">
-                        Esta ruta pasa por los siguientes lugares:
-                        <p><a href="../index.php?place1">ALCAZABA</a></p>
-                        <p><a href="../index.php?place2">PALACIO NAZARI</a></p>
-                        <p><a href="../index.php?place3">ALHAMBRA</a></p>
+                    <p>De planta trapezoidal algo irregular, la alcazaba es el recinto situado en la parte más occidental del cerro de Sabika, constituía la zona militar, centro de la defensa y vigilancia del recinto y con ello fue la parte de construcción más antigua de la Alhambra. Las primeras edificaciones hispanomusulmanas realizadas se corresponden con la época califal, en el siglo XI, Así como de la dinastía zirí, ampliándose las mismas al convertirse Granada en capital de uno de los reinos de Taifas.</p>
 
-
-                    <div class="button intro_button2"><div class="button_bcg"></div><a href="#">Guardar Ruta<span></span><span></span><span></span></a></div>
-                    <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionRutaView">Valorar Ruta<span></span><span></span><span></span></a></div>
-                    </p>
+                    <p>Con Muhammad I, primer rey nazarí de Granada, se reconstruyó y amplió esta fortaleza, se reforzaron sus muros y se levantaron las principales torres. Su sucesor Muhammad II terminó las obras de reconstrucción de la alcazaba. Con anterioridad a la edificación de los palacios nazaries, esta área compartía también una función de alojamiento real.</p>
                 </div>
+                <div class="button intro_button2"><div class="button_bcg"></div><a href="../index.php?ValoracionLugarView">Valorar Lugar<span></span><span></span><span></span></a></div>
             </div>
         </div>
     </div>
@@ -53,8 +48,8 @@
 </div>
 
 <?php
- if ($logged) {
-     echo('<div class="contact_form_section">
+if ($logged) {
+    echo('<div class="contact_form_section">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -75,6 +70,5 @@
         </div>
     </div>
 </div>');
- }
+}
 ?>
-

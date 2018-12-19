@@ -64,7 +64,7 @@ $result = $rutaMostrar->mostrarRutas();  // Array de rutas. Campos: IDruta 	nomb
 
                     <div class="intro_item_background" style="background-image:url(../Imagenes/Sierra2.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route1">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <div class="ruta2_title">
                                 <h1>ruta</h1>
@@ -83,18 +83,18 @@ $result = $rutaMostrar->mostrarRutas();  // Array de rutas. Campos: IDruta 	nomb
             </div>
 
             <!-- Intro Item -->
-
+           
             <div class="col-lg-4 intro_col">
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
 
-                    <div class="intro_item_background" style="background-image:url(../Imagenes/MiradorSanNicolas.jpg)"></div>
+                    <div class="intro_item_background" style="background-image:url(../Imagenes/tapas.jpg)"></div>
                     <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route">ver más<span></span><span></span><span></span></a></div>
+                        <div class="button intro_button"><div class="button_bcg"></div><a href="../index.php?route2">ver más<span></span><span></span><span></span></a></div>
                         <div class="intro_center text-center">
                             <div class="ruta2_title">
                                 <h1>ruta</h1>
-                                <h1>Mirador San Nicolás</h1>
+                                <h1>Bares de Tapas</h1>
                             </div>
                             <div class="rating rating_5">
                                 <i class="fa fa-star"></i>
@@ -108,8 +108,7 @@ $result = $rutaMostrar->mostrarRutas();  // Array de rutas. Campos: IDruta 	nomb
                 </div>
             </div>
 
-            <!-- Intro Item -->
-
+            <!--
             <div class="col-lg-4 intro_col">
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
@@ -134,8 +133,7 @@ $result = $rutaMostrar->mostrarRutas();  // Array de rutas. Campos: IDruta 	nomb
                 </div>
             </div>
 
-            <!-- Intro Item -->
-
+            
             <div class="col-lg-4 intro_col">
                 <div class="intro_item">
                     <div class="intro_item_overlay"></div>
@@ -159,7 +157,7 @@ $result = $rutaMostrar->mostrarRutas();  // Array de rutas. Campos: IDruta 	nomb
                     </div>
                 </div>
             </div>
-
+            -->
             <?php
             // Imprimir los lugares presentes
             $lasRutas = $rutaMostrar->rutas;
